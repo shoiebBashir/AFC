@@ -1,321 +1,1840 @@
 <!DOCTYPE html>
 <html lang="en" id="htmlRoot">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>AFC — Amjad Fayez Eid Al Adama General Cont. Est.</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;600;700&family=Inter:wght@400;500;600&family=Cairo:wght@500;700&display=swap" rel="stylesheet">
-<style>
-:root{
-  --navy:#173b5e; --navy-deep:#0f2942; --orange:#e2812b; --magenta:#c81e6e;
-  --cream:#f6f3ec; --ink:#1c2530; --ink-soft:#5b6672; --line:#dfd8c8;
-  box-sizing:border-box; padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
-}
-*{box-sizing:border-box; margin:0; padding:0;}
-html{scroll-behavior:smooth; scroll-padding-top:env(safe-area-inset-top,0px);}
-body{background:var(--cream); color:var(--ink); font-family:'Inter',sans-serif; line-height:1.6; overflow-x:hidden;}
-[dir="rtl"] body{font-family:'Cairo','Inter',sans-serif;}
-h1,h2,h3{font-family:'Fraunces',serif; font-weight:600; color:var(--navy-deep);}
-[dir="rtl"] h1,[dir="rtl"] h2,[dir="rtl"] h3{font-family:'Cairo',serif; font-weight:700;}
-a{color:inherit; text-decoration:none;}
-.wrap{max-width:1080px; margin:0 auto; padding:0 28px;}
-.rule{height:3px; background:linear-gradient(90deg,var(--orange),var(--magenta)); border:none; width:64px;}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>AFC — Amjad Fayez Eid Al Adama General Cont. Est.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;600;700&family=Inter:wght@400;500;600&family=Cairo:wght@500;700&family=Noto+Sans+SC:wght@500;700&family=Noto+Nastaliq+Urdu:wght@500;700&family=Noto+Sans+Devanagari:wght@500;700&display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      --navy: #173b5e;
+      --navy-deep: #0f2942;
+      --orange: #e2812b;
+      --magenta: #c81e6e;
+      --cream: #f6f3ec;
+      --ink: #1c2530;
+      --ink-soft: #5b6672;
+      --line: #dfd8c8;
+      box-sizing: border-box;
+      padding-top: env(safe-area-inset-top, 0px);
+      padding-bottom: env(safe-area-inset-bottom, 0px);
+    }
 
-/* Nav */
-header{position:sticky; top:0; z-index:20; background:var(--navy-deep); padding:env(safe-area-inset-top,0px) 0 0;}
-.navrow{display:flex; align-items:center; justify-content:space-between; padding:14px 28px; max-width:1080px; margin:0 auto;}
-.brand{display:flex; align-items:center; gap:10px; color:#fff;}
-.brand .mark{width:38px; height:38px; border-radius:50%; border:2px solid var(--orange); display:flex; align-items:center; justify-content:center; font-family:'Fraunces',serif; font-weight:700; font-size:14px;}
-.brand .name{font-size:15px; letter-spacing:.02em; font-weight:600;}
-.brand .sub{font-size:11px; color:#b9c6d4;}
-#langBtn{background:transparent; border:1px solid #3d5875; color:#e8ecef; padding:7px 14px; border-radius:20px; font-size:13px; cursor:pointer; font-family:inherit;}
-#langBtn:hover{border-color:var(--orange); color:var(--orange);}
-#langBtn:focus-visible{outline:2px solid var(--orange); outline-offset:2px;}
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-/* Hero */
-.hero{position:relative; background:var(--navy-deep); color:#fff; padding:76px 0 96px; overflow:hidden;}
-.hero .wrap{position:relative; z-index:2; display:grid; grid-template-columns:1.1fr .9fr; gap:40px; align-items:center;}
-.hero .eyebrow{color:var(--orange); font-size:14px; font-weight:600; margin-bottom:14px;}
-.hero h1{font-size:clamp(32px,4.4vw,50px); line-height:1.12; color:#fff; max-width:11ch;}
-.hero p.lead{margin-top:18px; color:#c7d2dc; max-width:46ch; font-size:16.5px;}
-.hero .ctas{display:flex; gap:14px; margin-top:30px; flex-wrap:wrap;}
-.btn{display:inline-flex; align-items:center; gap:8px; padding:12px 22px; border-radius:4px; font-size:14.5px; font-weight:600; transition:transform .15s ease;}
-.btn:hover{transform:translateY(-2px);}
-.btn-primary{background:var(--orange); color:#1c1200;}
-.btn-ghost{border:1px solid #4a6685; color:#fff;}
-.skyline{position:relative; height:280px;}
-.hero-band{position:absolute; inset:0; background:linear-gradient(180deg,transparent,rgba(226,129,43,.08));}
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: env(safe-area-inset-top, 0px);
+    }
 
-/* svg building */
-.svg-city{width:100%; height:auto; display:block;}
+    body {
+      background: var(--cream);
+      color: var(--ink);
+      font-family: 'Inter', sans-serif;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
 
-/* strip */
-.stripbar{background:var(--orange); color:#221607;}
-.strip-inner{max-width:1080px; margin:0 auto; padding:16px 28px; display:flex; gap:36px; flex-wrap:wrap; font-size:14px; font-weight:600;}
-.strip-inner span{opacity:.85; font-weight:500; margin-inline-start:6px;}
+    html[lang="ar"] body {
+      font-family: 'Cairo', 'Inter', sans-serif;
+    }
 
-/* sections */
-section{padding:74px 0;}
-.eyebrow-label{color:var(--magenta); font-weight:600; font-size:13.5px; margin-bottom:10px;}
-.section-head{max-width:640px; margin-bottom:44px;}
-.section-head h2{font-size:clamp(26px,3vw,34px); margin-top:10px;}
-.section-head p{color:var(--ink-soft); margin-top:12px; font-size:15.5px;}
+    html[lang="ur"] body {
+      font-family: 'Noto Nastaliq Urdu', 'Cairo', sans-serif;
+    }
 
-.services{display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:var(--line); border:1px solid var(--line);}
-.svc{background:var(--cream); padding:30px 26px;}
-.svc .num{color:var(--orange); font-family:'Fraunces',serif; font-size:13px; font-weight:600;}
-.svc h3{font-size:18.5px; margin-top:14px;}
-.svc p{color:var(--ink-soft); font-size:14px; margin-top:8px;}
-.svc svg{width:30px; height:30px; stroke:var(--navy); fill:none; stroke-width:1.6;}
+    html[lang="zh"] body {
+      font-family: 'Noto Sans SC', 'Inter', sans-serif;
+    }
 
-.about{display:grid; grid-template-columns:1fr 1fr; gap:56px; align-items:center;}
-.about-figure{background:var(--navy); border-radius:2px; padding:34px; color:#fff; position:relative;}
-.about-figure .quote-mark{font-family:'Fraunces',serif; font-size:60px; color:var(--orange); line-height:1;}
-.about-figure p{color:#cfdae4; margin-top:6px; font-size:16px;}
-.about-figure .credit{margin-top:22px; font-size:13.5px; color:#8fa4b8;}
-.stats{display:flex; gap:0; margin-top:30px; border-top:1px solid var(--line);}
-.stat{padding:18px 24px 0 0; border-inline-end:1px solid var(--line); flex:1;}
-.stat b{font-family:'Fraunces',serif; font-size:26px; color:var(--navy-deep); display:block;}
-.stat span{font-size:12.5px; color:var(--ink-soft);}
+    html[lang="hi"] body {
+      font-family: 'Noto Sans Devanagari', 'Inter', sans-serif;
+    }
 
-.contact{background:var(--navy-deep); color:#fff;}
-.contact .section-head p{color:#b9c6d4;}
-.contact-grid{display:grid; grid-template-columns:1.1fr .9fr; gap:50px;}
-.ccard{display:flex; gap:14px; padding:18px 0; border-bottom:1px solid #26415e;}
-.ccard svg{width:20px; height:20px; stroke:var(--orange); fill:none; stroke-width:1.6; flex:none; margin-top:2px;}
-.ccard b{display:block; font-size:14.5px; color:#fff;}
-.ccard span{font-size:13.5px; color:#9fb0c2;}
-.mappane{background:#0d2338; border:1px solid #26415e; border-radius:2px; padding:26px; height:100%;}
-.mappane h3{color:#fff; font-size:16px; margin-bottom:10px;}
-.mappane p{color:#9fb0c2; font-size:14px;}
+    h1,
+    h2,
+    h3 {
+      font-family: 'Fraunces', serif;
+      font-weight: 600;
+      color: var(--navy-deep);
+    }
 
-.gallery-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:18px; margin-top:10px;}
-.gimg{border:1px solid var(--line); background:#fff; overflow:hidden;}
-.gimg img{width:100%; height:220px; object-fit:cover; display:block; background:#eae4d5;}
-.gimg figcaption{padding:12px 14px; font-size:13.5px; color:var(--ink-soft); border-top:1px solid var(--line);}
-@media (max-width:760px){ .gallery-grid{grid-template-columns:1fr;} }
+    html[lang="ar"] h1,
+    html[lang="ar"] h2,
+    html[lang="ar"] h3 {
+      font-family: 'Cairo', serif;
+      font-weight: 700;
+    }
 
-footer{background:#0a1c2e; color:#7c8fa3; padding:26px 0; font-size:13px;}
-.footrow{display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px;}
+    html[lang="ur"] h1,
+    html[lang="ur"] h2,
+    html[lang="ur"] h3 {
+      font-family: 'Noto Nastaliq Urdu', serif;
+      font-weight: 700;
+    }
 
-@media (max-width:760px){
-  .hero .wrap{grid-template-columns:1fr;}
-  .services{grid-template-columns:1fr;}
-  .about{grid-template-columns:1fr;}
-  .contact-grid{grid-template-columns:1fr;}
-  .stats{flex-wrap:wrap;}
-  .stat{flex:1 1 45%; border-bottom:1px solid var(--line); padding-bottom:14px;}
-}
-@media (prefers-reduced-motion:reduce){ *{transition:none!important;} }
-</style>
+    html[lang="zh"] h1,
+    html[lang="zh"] h2,
+    html[lang="zh"] h3 {
+      font-family: 'Noto Sans SC', serif;
+      font-weight: 700;
+    }
+
+    html[lang="hi"] h1,
+    html[lang="hi"] h2,
+    html[lang="hi"] h3 {
+      font-family: 'Noto Sans Devanagari', serif;
+      font-weight: 700;
+    }
+
+    #langSel {
+      background: #0f2942;
+      border: 1px solid #3d5875;
+      color: #e8ecef;
+      padding: 7px 10px;
+      border-radius: 20px;
+      font-size: 13px;
+      cursor: pointer;
+      font-family: inherit;
+    }
+
+    #langSel:focus-visible {
+      outline: 2px solid var(--orange);
+      outline-offset: 2px;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .wrap {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 0 28px;
+    }
+
+    .rule {
+      height: 3px;
+      background: linear-gradient(90deg, var(--orange), var(--magenta));
+      border: none;
+      width: 64px;
+    }
+
+    /* Nav */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: var(--navy-deep);
+      padding: env(safe-area-inset-top, 0px) 0 0;
+    }
+
+    .navrow {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 28px;
+      max-width: 1080px;
+      margin: 0 auto;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: #fff;
+    }
+
+    .brand .mark {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      border: 2px solid var(--orange);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Fraunces', serif;
+      font-weight: 700;
+      font-size: 14px;
+    }
+
+    .brand .name {
+      font-size: 15px;
+      letter-spacing: .02em;
+      font-weight: 600;
+    }
+
+    .brand .sub {
+      font-size: 11px;
+      color: #b9c6d4;
+    }
+
+    #langBtn {
+      background: transparent;
+      border: 1px solid #3d5875;
+      color: #e8ecef;
+      padding: 7px 14px;
+      border-radius: 20px;
+      font-size: 13px;
+      cursor: pointer;
+      font-family: inherit;
+    }
+
+    #langBtn:hover {
+      border-color: var(--orange);
+      color: var(--orange);
+    }
+
+    #langBtn:focus-visible {
+      outline: 2px solid var(--orange);
+      outline-offset: 2px;
+    }
+
+    .navlinks {
+      display: flex;
+      gap: 18px;
+      font-size: 12.5px;
+    }
+
+    .navlinks a {
+      color: #b9c6d4;
+      white-space: nowrap;
+    }
+
+    .navlinks a:hover {
+      color: var(--orange);
+    }
+
+    @media(max-width:980px) {
+      .navlinks {
+        display: none;
+      }
+    }
+
+    .hamburger {
+      display: none;
+      background: transparent;
+      border: 1px solid #3d5875;
+      border-radius: 6px;
+      cursor: pointer;
+      padding: 0;
+      width: 36px;
+      height: 36px;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 20px;
+      line-height: 1;
+    }
+
+    .hamburger:hover {
+      border-color: var(--orange);
+      color: var(--orange);
+    }
+
+    @media(max-width:980px) {
+      .hamburger {
+        display: flex;
+      }
+    }
+
+    .mobile-nav {
+      display: none;
+      flex-direction: column;
+      background: var(--navy-deep);
+      border-top: 1px solid #26415e;
+      padding: 6px 28px 16px;
+    }
+
+    .mobile-nav.open {
+      display: flex;
+    }
+
+    .mobile-nav a {
+      color: #dbe3ea;
+      padding: 12px 0;
+      border-bottom: 1px solid #1d3550;
+      font-size: 14.5px;
+    }
+
+    .mobile-nav a:last-child {
+      border-bottom: none;
+    }
+
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      margin-top: 8px;
+    }
+
+    .step .stepnum {
+      font-family: 'Fraunces', serif;
+      font-size: 32px;
+      color: var(--orange);
+      opacity: .55;
+    }
+
+    .step h3 {
+      font-size: 16px;
+      margin-top: 6px;
+    }
+
+    .step p {
+      font-size: 13.5px;
+      color: var(--ink-soft);
+      margin-top: 6px;
+    }
+
+    @media(max-width:760px) {
+      .process-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 26px;
+      margin-top: 8px;
+    }
+
+    .reason {
+      display: flex;
+      gap: 14px;
+    }
+
+    .reason svg {
+      width: 24px;
+      height: 24px;
+      stroke: var(--magenta);
+      fill: none;
+      stroke-width: 1.6;
+      flex: none;
+      margin-top: 3px;
+    }
+
+    .reason h3 {
+      font-size: 15.5px;
+    }
+
+    .reason p {
+      font-size: 13.5px;
+      color: var(--ink-soft);
+      margin-top: 4px;
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .pcard {
+      border: 1px solid var(--line);
+      background: #fff;
+    }
+
+    .pcard .pimg {
+      height: 150px;
+      background: #e0dccf;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #8a8471;
+      font-size: 13px;
+    }
+
+    .pcard .pbody {
+      padding: 16px;
+    }
+
+    .pcard .ptag {
+      font-size: 11px;
+      color: var(--orange);
+      font-weight: 600;
+    }
+
+    .pcard h3 {
+      font-size: 15.5px;
+      margin-top: 6px;
+    }
+
+    .pcard p {
+      font-size: 13px;
+      color: var(--ink-soft);
+      margin-top: 6px;
+    }
+
+    @media(max-width:760px) {
+      .projects-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 22px;
+    }
+
+    .member {
+      background: var(--cream);
+      border: 1px solid var(--line);
+      padding: 26px;
+      text-align: center;
+    }
+
+    .member .avatar {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: var(--navy);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Fraunces', serif;
+      font-size: 18px;
+      margin: 0 auto 12px;
+    }
+
+    .member h3 {
+      font-size: 15.5px;
+    }
+
+    .member span {
+      font-size: 12.5px;
+      color: var(--ink-soft);
+    }
+
+    .testi-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .testi {
+      background: #fff;
+      border: 1px solid var(--line);
+      padding: 22px;
+    }
+
+    .testi .qmark {
+      font-family: 'Fraunces', serif;
+      font-size: 30px;
+      color: var(--orange);
+      line-height: .6;
+    }
+
+    .testi p {
+      font-size: 13.5px;
+      color: var(--ink-soft);
+      margin-top: 8px;
+    }
+
+    .testi b {
+      display: block;
+      margin-top: 14px;
+      font-size: 13px;
+      color: var(--navy-deep);
+    }
+
+    @media(max-width:760px) {
+      .testi-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .faq-item {
+      border-bottom: 1px solid var(--line);
+      padding: 16px 0;
+    }
+
+    .faq-item summary {
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 14.5px;
+      color: var(--navy-deep);
+      list-style: none;
+    }
+
+    .faq-item summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .faq-item p {
+      margin-top: 8px;
+      color: var(--ink-soft);
+      font-size: 13.5px;
+    }
+
+    .alt {
+      background: #fff;
+    }
+
+    .stats-band {
+      background: var(--navy-deep);
+      color: #fff;
+      padding: 44px 0;
+    }
+
+    .stats-row {
+      display: flex;
+      text-align: center;
+      flex-wrap: wrap;
+    }
+
+    .stats-row .sitem {
+      flex: 1;
+      min-width: 130px;
+      border-inline-end: 1px solid #26415e;
+      padding: 0 10px;
+    }
+
+    .stats-row .sitem:last-child {
+      border: none;
+    }
+
+    .stats-row b {
+      font-family: 'Fraunces', serif;
+      font-size: 30px;
+      display: block;
+      color: var(--orange);
+    }
+
+    [dir="rtl"] .stats-row b {
+      font-family: 'Cairo', serif;
+    }
+
+    .stats-row span {
+      font-size: 12.5px;
+      color: #9fb0c2;
+    }
+
+    .areas-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 8px;
+    }
+
+    .area-pill {
+      background: #fff;
+      border: 1px solid var(--line);
+      padding: 10px 20px;
+      border-radius: 20px;
+      font-size: 13.5px;
+      color: var(--navy-deep);
+      font-weight: 500;
+    }
+
+    .careers {
+      text-align: center;
+    }
+
+    .careers .wrap {
+      max-width: 640px;
+    }
+
+    .careers .btn {
+      margin-top: 20px;
+    }
+
+    /* Hero */
+    .hero {
+      position: relative;
+      background: var(--navy-deep);
+      color: #fff;
+      padding: 76px 0 96px;
+      overflow: hidden;
+    }
+
+    .hero .wrap {
+      position: relative;
+      z-index: 2;
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .hero .eyebrow {
+      color: var(--orange);
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 14px;
+    }
+
+    .hero h1 {
+      font-size: clamp(32px, 4.4vw, 50px);
+      line-height: 1.12;
+      color: #fff;
+      max-width: 11ch;
+    }
+
+    .hero p.lead {
+      margin-top: 18px;
+      color: #c7d2dc;
+      max-width: 46ch;
+      font-size: 16.5px;
+    }
+
+    .hero .ctas {
+      display: flex;
+      gap: 14px;
+      margin-top: 30px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 22px;
+      border-radius: 4px;
+      font-size: 14.5px;
+      font-weight: 600;
+      transition: transform .15s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-primary {
+      background: var(--orange);
+      color: #1c1200;
+    }
+
+    .btn-ghost {
+      border: 1px solid #4a6685;
+      color: #fff;
+    }
+
+    .skyline {
+      position: relative;
+      height: 280px;
+    }
+
+    .hero-band {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, transparent, rgba(226, 129, 43, .08));
+    }
+
+    /* svg building */
+    .svg-city {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* strip */
+    .stripbar {
+      background: var(--orange);
+      color: #221607;
+    }
+
+    .strip-inner {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 16px 28px;
+      display: flex;
+      gap: 36px;
+      flex-wrap: wrap;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .strip-inner span {
+      opacity: .85;
+      font-weight: 500;
+      margin-inline-start: 6px;
+    }
+
+    /* sections */
+    section {
+      padding: 74px 0;
+    }
+
+    .eyebrow-label {
+      color: var(--magenta);
+      font-weight: 600;
+      font-size: 13.5px;
+      margin-bottom: 10px;
+    }
+
+    .section-head {
+      max-width: 640px;
+      margin-bottom: 44px;
+    }
+
+    .section-head h2 {
+      font-size: clamp(26px, 3vw, 34px);
+      margin-top: 10px;
+    }
+
+    .section-head p {
+      color: var(--ink-soft);
+      margin-top: 12px;
+      font-size: 15.5px;
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: var(--line);
+      border: 1px solid var(--line);
+    }
+
+    .svc {
+      background: var(--cream);
+      padding: 30px 26px;
+    }
+
+    .svc .num {
+      color: var(--orange);
+      font-family: 'Fraunces', serif;
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .svc h3 {
+      font-size: 18.5px;
+      margin-top: 14px;
+    }
+
+    .svc p {
+      color: var(--ink-soft);
+      font-size: 14px;
+      margin-top: 8px;
+    }
+
+    .svc svg {
+      width: 30px;
+      height: 30px;
+      stroke: var(--navy);
+      fill: none;
+      stroke-width: 1.6;
+    }
+
+    .about {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 56px;
+      align-items: center;
+    }
+
+    .about-figure {
+      background: var(--navy);
+      border-radius: 2px;
+      padding: 34px;
+      color: #fff;
+      position: relative;
+    }
+
+    .about-figure .quote-mark {
+      font-family: 'Fraunces', serif;
+      font-size: 60px;
+      color: var(--orange);
+      line-height: 1;
+    }
+
+    .about-figure p {
+      color: #cfdae4;
+      margin-top: 6px;
+      font-size: 16px;
+    }
+
+    .about-figure .credit {
+      margin-top: 22px;
+      font-size: 13.5px;
+      color: #8fa4b8;
+    }
+
+    .stats {
+      display: flex;
+      gap: 0;
+      margin-top: 30px;
+      border-top: 1px solid var(--line);
+    }
+
+    .stat {
+      padding: 18px 24px 0 0;
+      border-inline-end: 1px solid var(--line);
+      flex: 1;
+    }
+
+    .stat b {
+      font-family: 'Fraunces', serif;
+      font-size: 26px;
+      color: var(--navy-deep);
+      display: block;
+    }
+
+    .stat span {
+      font-size: 12.5px;
+      color: var(--ink-soft);
+    }
+
+    .contact {
+      background: var(--navy-deep);
+      color: #fff;
+    }
+
+    .contact .section-head p {
+      color: #b9c6d4;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 50px;
+    }
+
+    .ccard {
+      display: flex;
+      gap: 14px;
+      padding: 18px 0;
+      border-bottom: 1px solid #26415e;
+    }
+
+    .ccard svg {
+      width: 20px;
+      height: 20px;
+      stroke: var(--orange);
+      fill: none;
+      stroke-width: 1.6;
+      flex: none;
+      margin-top: 2px;
+    }
+
+    .ccard b {
+      display: block;
+      font-size: 14.5px;
+      color: #fff;
+    }
+
+    .ccard span {
+      font-size: 13.5px;
+      color: #9fb0c2;
+    }
+
+    .mappane {
+      background: #0d2338;
+      border: 1px solid #26415e;
+      border-radius: 2px;
+      padding: 26px;
+      height: 100%;
+    }
+
+    .mappane h3 {
+      color: #fff;
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    .mappane p {
+      color: #9fb0c2;
+      font-size: 14px;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      margin-top: 10px;
+    }
+
+    .gimg {
+      border: 1px solid var(--line);
+      background: #fff;
+      overflow: hidden;
+    }
+
+    .gimg img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      display: block;
+      background: #eae4d5;
+    }
+
+    .gtile {
+      width: 100%;
+      height: 220px;
+      display: block;
+    }
+
+    .gimg figcaption {
+      padding: 12px 14px;
+      font-size: 13.5px;
+      color: var(--ink-soft);
+      border-top: 1px solid var(--line);
+    }
+
+    @media (max-width:760px) {
+      .gallery-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .cta-band {
+      background: linear-gradient(90deg, var(--orange), var(--magenta));
+      color: #fff;
+      padding: 52px 0;
+      text-align: center;
+    }
+
+    .cta-band h2 {
+      color: #fff;
+      font-size: clamp(22px, 3vw, 30px);
+      max-width: 16ch;
+      margin: 0 auto;
+    }
+
+    .cta-band p {
+      margin-top: 12px;
+      color: #fff8f0;
+      font-size: 15px;
+      max-width: 52ch;
+      margin-inline: auto;
+    }
+
+    .cta-band .btn {
+      margin-top: 24px;
+      background: #0f2942;
+      color: #fff;
+    }
+
+    footer {
+      background: #0a1c2e;
+      color: #7c8fa3;
+      padding: 26px 0;
+      font-size: 13px;
+    }
+
+    .footrow {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    @media (max-width:760px) {
+      .hero .wrap {
+        grid-template-columns: 1fr;
+      }
+
+      .services {
+        grid-template-columns: 1fr;
+      }
+
+      .about {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .stats {
+        flex-wrap: wrap;
+      }
+
+      .stat {
+        flex: 1 1 45%;
+        border-bottom: 1px solid var(--line);
+        padding-bottom: 14px;
+      }
+    }
+
+    @media (prefers-reduced-motion:reduce) {
+      * {
+        transition: none !important;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
-<header>
-  <div class="navrow">
-    <div class="brand">
-      <div class="mark">AFC</div>
+  <header>
+    <div class="navrow">
+      <div class="brand">
+        <div class="mark">AFC</div>
+        <div>
+          <div class="name" data-en="Amjad Fayez Eid Al Adama" data-ar="مؤسسة أمجاد فايز عيد الدوسري"
+            data-zh="阿姆贾德·法耶兹·艾德·阿达马" data-ur="امجد فایز عید الادامہ" data-hi="अमजद फ़ायेज़ ईद अल अदामा">Amjad Fayez Eid
+            Al Adama</div>
+          <div class="sub" data-en="General Contracting Est." data-ar="للمقاولات العامة" data-zh="综合承包机构"
+            data-ur="جنرل کنٹریکٹنگ ادارہ" data-hi="जनरल कॉन्ट्रैक्टिंग एस्ट.">General Contracting Est.</div>
+        </div>
+      </div>
+      <nav class="navlinks">
+        <a href="#services" data-en="Services" data-ar="خدماتنا" data-zh="服务" data-ur="خدمات"
+          data-hi="सेवाएं">Services</a>
+        <a href="#process" data-en="Process" data-ar="آلية العمل" data-zh="流程" data-ur="طریقہ کار"
+          data-hi="प्रक्रिया">Process</a>
+        <a href="#projects" data-en="Projects" data-ar="مشاريعنا" data-zh="项目" data-ur="منصوبے"
+          data-hi="परियोजनाएं">Projects</a>
+        <a href="#team" data-en="Team" data-ar="فريقنا" data-zh="团队" data-ur="ٹیم" data-hi="टीम">Team</a>
+        <a href="#areas" data-en="Areas" data-ar="المناطق" data-zh="服务地区" data-ur="علاقے" data-hi="क्षेत्र">Areas</a>
+        <a href="#careers" data-en="Careers" data-ar="وظائف" data-zh="招聘" data-ur="ملازمتیں" data-hi="करियर">Careers</a>
+        <a href="#about" data-en="About" data-ar="من نحن" data-zh="关于我们" data-ur="ہمارے بارے میں"
+          data-hi="हमारे बारे में">About</a>
+        <a href="#faq" data-en="FAQ" data-ar="الأسئلة" data-zh="常见问题" data-ur="سوالات" data-hi="प्रश्न">FAQ</a>
+        <a href="#contact" data-en="Contact" data-ar="تواصل" data-zh="联系我们" data-ur="رابطہ"
+          data-hi="संपर्क करें">Contact</a>
+      </nav>
+      <div style="display:flex; align-items:center; gap:8px;">
+        <select id="langSel" onchange="setLang(this.value)">
+          <option value="en">English</option>
+          <option value="ar">العربية</option>
+          <option value="zh">中文</option>
+          <option value="ur">اردو</option>
+          <option value="hi">हिंदी</option>
+        </select>
+        <button class="hamburger" id="hamBtn" onclick="toggleMenu()" aria-label="Menu" aria-expanded="false">☰</button>
+      </div>
+    </div>
+    <nav class="mobile-nav" id="mobileNav">
+      <a href="#services" onclick="closeMenu()" data-en="Services" data-ar="خدماتنا" data-zh="服务" data-ur="خدمات"
+        data-hi="सेवाएं">Services</a>
+      <a href="#process" onclick="closeMenu()" data-en="Process" data-ar="آلية العمل" data-zh="流程" data-ur="طریقہ کار"
+        data-hi="प्रक्रिया">Process</a>
+      <a href="#projects" onclick="closeMenu()" data-en="Projects" data-ar="مشاريعنا" data-zh="项目" data-ur="منصوبے"
+        data-hi="परियोजनाएं">Projects</a>
+      <a href="#team" onclick="closeMenu()" data-en="Team" data-ar="فريقنا" data-zh="团队" data-ur="ٹیم"
+        data-hi="टीम">Team</a>
+      <a href="#areas" onclick="closeMenu()" data-en="Areas" data-ar="المناطق" data-zh="服务地区" data-ur="علاقے"
+        data-hi="क्षेत्र">Areas</a>
+      <a href="#careers" onclick="closeMenu()" data-en="Careers" data-ar="وظائف" data-zh="招聘" data-ur="ملازمتیں"
+        data-hi="करियर">Careers</a>
+      <a href="#about" onclick="closeMenu()" data-en="About" data-ar="من نحن" data-zh="关于我们" data-ur="ہمارے بارے میں"
+        data-hi="हमारे बारे में">About</a>
+      <a href="#faq" onclick="closeMenu()" data-en="FAQ" data-ar="الأسئلة" data-zh="常见问题" data-ur="سوالات"
+        data-hi="प्रश्न">FAQ</a>
+      <a href="#contact" onclick="closeMenu()" data-en="Contact" data-ar="تواصل" data-zh="联系我们" data-ur="رابطہ"
+        data-hi="संपर्क करें">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="wrap">
       <div>
-        <div class="name" data-en="Amjad Fayez Eid Al Adama" data-ar="مؤسسة أمجاد فايز عيد الدوسري">Amjad Fayez Eid Al Adama</div>
-        <div class="sub" data-en="General Contracting Est." data-ar="للمقاولات العامة">General Contracting Est.</div>
+        <div class="eyebrow" data-en="WADI AL DAWASIR · SAUDI ARABIA" data-ar="وادي الدواسر · المملكة العربية السعودية"
+          data-zh="瓦迪杜瓦西尔 · 沙特阿拉伯" data-ur="وادی الدواسر · سعودی عرب" data-hi="वादी अल-दवासिर · सऊदी अरब">WADI AL
+          DAWASIR · SAUDI ARABIA</div>
+        <h1 data-en="Manpower, materials and machinery for Saudi projects"
+          data-ar="قوى عاملة ومواد ومعدات لمشاريعكم في السعودية" data-zh="为沙特项目提供人力、材料和设备"
+          data-ur="سعودی منصوبوں کے لیے افرادی قوت، مواد اور مشینری"
+          data-hi="सऊदी परियोजनाओं के लिए जनशक्ति, सामग्री और मशीनरी">Manpower, materials and machinery for Saudi
+          projects</h1>
+        <p class="lead"
+          data-en="AFC supplies licensed contractors and developers across the Kingdom with skilled manpower, construction materials, transportation and heavy equipment — coordinated by Muhammad Alyas."
+          data-ar="تقدّم AFC للمقاولين والمطورين المرخّصين في جميع أنحاء المملكة قوى عاملة ماهرة ومواد بناء ووسائل نقل ومعدات ثقيلة — بإدارة محمد الياس."
+          data-zh="AFC 为全国各地持牌承包商和开发商提供熟练劳动力、建筑材料、运输和重型设备服务——由穆罕默德·阿利亚斯统筹协调。"
+          data-ur="AFC پورے مملکت میں لائسنس یافتہ ٹھیکیداروں اور ڈویلپرز کو ہنر مند افرادی قوت، تعمیراتی مواد، نقل و حمل اور بھاری مشینری فراہم کرتا ہے — محمد الیاس کی نگرانی میں۔"
+          data-hi="AFC पूरे राज्य में लाइसेंस प्राप्त ठेकेदारों और डेवलपर्स को कुशल जनशक्ति, निर्माण सामग्री, परिवहन और भारी उपकरण उपलब्ध कराता है — मुहम्मद अलियास के समन्वय में।">
+          AFC supplies licensed contractors and developers across the Kingdom with skilled manpower, construction
+          materials, transportation and heavy equipment — coordinated by Muhammad Alyas.</p>
+        <div class="ctas">
+          <a class="btn btn-primary" href="https://wa.me/966532279496" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="#1c1200">
+              <path
+                d="M12.04 2c-5.5 0-10 4.5-10 10 0 1.77.46 3.45 1.27 4.9L2 22l5.25-1.38A9.94 9.94 0 0 0 12.04 22c5.5 0 10-4.5 10-10s-4.5-10-10-10zm5.8 14.2c-.24.68-1.4 1.3-1.95 1.38-.5.08-1.13.11-1.82-.12-.42-.14-.96-.32-1.66-.62-2.92-1.26-4.83-4.2-4.98-4.4-.14-.2-1.2-1.6-1.2-3.06s.76-2.17 1.03-2.47c.26-.3.58-.37.77-.37h.55c.18 0 .42-.03.65.5.24.55.8 1.9.87 2.04.07.14.12.3.02.5-.1.2-.15.3-.3.47-.14.16-.3.36-.43.48-.14.14-.29.29-.13.57.16.28.71 1.18 1.53 1.9 1.05.94 1.94 1.24 2.22 1.38.28.14.44.12.6-.07.16-.2.68-.8.86-1.07.18-.28.36-.23.6-.14.24.1 1.55.73 1.82.86.27.14.45.2.51.32.07.12.07.68-.17 1.36z" />
+            </svg>
+            <span data-en="WhatsApp 053 227 9496" data-ar="واتساب 9496 227 053" data-zh="WhatsApp 053 227 9496"
+              data-ur="واٹس ایپ 053 227 9496" data-hi="व्हाट्सएप 053 227 9496">WhatsApp 053 227 9496</span>
+          </a>
+          <a class="btn btn-ghost" href="mailto:mohdalyas496@gmail.com" data-en="Email Us"
+            data-ar="راسلنا بالبريد">Email Us</a>
+        </div>
+      </div>
+      <div class="skyline">
+        <div class="hero-band"></div>
+        <svg class="svg-city" viewBox="0 0 420 280" xmlns="http://www.w3.org/2000/svg">
+          <rect x="20" y="120" width="46" height="140" fill="#1f4569" />
+          <rect x="76" y="70" width="40" height="190" fill="#264f78" />
+          <rect x="126" y="150" width="34" height="110" fill="#1a3c5c" />
+          <rect x="170" y="40" width="44" height="220" fill="#2c5a86" />
+          <rect x="224" y="100" width="38" height="160" fill="#1f4569" />
+          <rect x="270" y="160" width="30" height="100" fill="#264f78" />
+          <rect x="308" y="60" width="42" height="200" fill="#2c5a86" />
+          <rect x="358" y="130" width="40" height="130" fill="#1a3c5c" />
+          <g stroke="#e2812b" stroke-width="2.5" fill="none">
+            <line x1="190" y1="40" x2="190" y2="8" />
+            <line x1="150" y1="8" x2="230" y2="8" />
+            <line x1="190" y1="8" x2="190" y2="26" />
+            <line x1="150" y1="8" x2="165" y2="26" />
+            <line x1="230" y1="8" x2="215" y2="26" />
+          </g>
+          <circle cx="190" cy="8" r="3" fill="#e2812b" />
+          <rect x="0" y="258" width="420" height="4" fill="#e2812b" opacity=".7" />
+        </svg>
       </div>
     </div>
-    <button id="langBtn" onclick="toggleLang()" data-en="العربية" data-ar="English">العربية</button>
-  </div>
-</header>
+  </section>
 
-<section class="hero">
-  <div class="wrap">
-    <div>
-      <div class="eyebrow" data-en="WADI AL DAWASIR · SAUDI ARABIA" data-ar="وادي الدواسر · المملكة العربية السعودية">WADI AL DAWASIR · SAUDI ARABIA</div>
-      <h1 data-en="Manpower, materials and machinery for Saudi projects" data-ar="قوى عاملة ومواد ومعدات لمشاريعكم في السعودية">Manpower, materials and machinery for Saudi projects</h1>
-      <p class="lead" data-en="AFC supplies licensed contractors and developers across the Kingdom with skilled manpower, construction materials, transportation and heavy equipment — coordinated by Muhammad Alyas." data-ar="تقدّم AFC للمقاولين والمطورين المرخّصين في جميع أنحاء المملكة قوى عاملة ماهرة ومواد بناء ووسائل نقل ومعدات ثقيلة — بإدارة محمد الياس.">AFC supplies licensed contractors and developers across the Kingdom with skilled manpower, construction materials, transportation and heavy equipment — coordinated by Muhammad Alyas.</p>
-      <div class="ctas">
-        <a class="btn btn-primary" href="tel:+966590388304" data-en="Call 059 038 8304" data-ar="اتصل 8304 038 059">Call 059 038 8304</a>
-        <a class="btn btn-ghost" href="mailto:mohdalyas496@gmail.com" data-en="Email Us" data-ar="راسلنا بالبريد">Email Us</a>
-      </div>
-    </div>
-    <div class="skyline">
-      <div class="hero-band"></div>
-      <svg class="svg-city" viewBox="0 0 420 280" xmlns="http://www.w3.org/2000/svg">
-        <rect x="20" y="120" width="46" height="140" fill="#1f4569"/>
-        <rect x="76" y="70" width="40" height="190" fill="#264f78"/>
-        <rect x="126" y="150" width="34" height="110" fill="#1a3c5c"/>
-        <rect x="170" y="40" width="44" height="220" fill="#2c5a86"/>
-        <rect x="224" y="100" width="38" height="160" fill="#1f4569"/>
-        <rect x="270" y="160" width="30" height="100" fill="#264f78"/>
-        <rect x="308" y="60" width="42" height="200" fill="#2c5a86"/>
-        <rect x="358" y="130" width="40" height="130" fill="#1a3c5c"/>
-        <g stroke="#e2812b" stroke-width="2.5" fill="none">
-          <line x1="190" y1="40" x2="190" y2="8"/>
-          <line x1="150" y1="8" x2="230" y2="8"/>
-          <line x1="190" y1="8" x2="190" y2="26"/>
-          <line x1="150" y1="8" x2="165" y2="26"/>
-          <line x1="230" y1="8" x2="215" y2="26"/>
-        </g>
-        <circle cx="190" cy="8" r="3" fill="#e2812b"/>
-        <rect x="0" y="258" width="420" height="4" fill="#e2812b" opacity=".7"/>
-      </svg>
-    </div>
-  </div>
-</section>
-
-<div class="stripbar">
-  <div class="strip-inner">
-    <div data-en="Licensed General Contracting Establishment" data-ar="مؤسسة مقاولات عامة مرخّصة">Licensed General Contracting Establishment</div>
-    <div data-en="Serving projects Kingdom-wide" data-ar="نخدم المشاريع في جميع أنحاء المملكة">Serving projects Kingdom-wide</div>
-  </div>
-</div>
-
-<section id="services">
-  <div class="wrap">
-    <div class="section-head">
-      <div class="eyebrow-label" data-en="WHAT WE SUPPLY" data-ar="ما نقدّمه">WHAT WE SUPPLY</div>
-      <h2 data-en="Everything a site needs, from one source" data-ar="كل ما يحتاجه موقع العمل، من جهة واحدة">Everything a site needs, from one source</h2>
-      <p data-en="From workforce mobilisation to heavy machinery, AFC keeps Saudi construction and industrial sites running." data-ar="من تعبئة القوى العاملة إلى المعدات الثقيلة، تُبقي AFC مواقع البناء والمواقع الصناعية في السعودية تعمل دون توقف.">From workforce mobilisation to heavy machinery, AFC keeps Saudi construction and industrial sites running.</p>
-    </div>
-    <div class="services">
-      <div class="svc">
-        <svg viewBox="0 0 24 24"><circle cx="12" cy="7" r="3.4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"/></svg>
-        <div class="num">01</div>
-        <h3 data-en="Manpower Supply" data-ar="توريد القوى العاملة">Manpower Supply</h3>
-        <p data-en="Skilled and general labour, mobilised and documented for Saudi worksites." data-ar="عمالة ماهرة وعامة، جاهزة وموثّقة لمواقع العمل السعودية.">Skilled and general labour, mobilised and documented for Saudi worksites.</p>
-      </div>
-      <div class="svc">
-        <svg viewBox="0 0 24 24"><path d="M3 21V9l9-6 9 6v12"/><path d="M9 21v-6h6v6"/></svg>
-        <div class="num">02</div>
-        <h3 data-en="Construction Materials" data-ar="مواد البناء">Construction Materials</h3>
-        <p data-en="Reliable sourcing and delivery of core building materials to site." data-ar="توريد وتوصيل موثوق لمواد البناء الأساسية إلى الموقع.">Reliable sourcing and delivery of core building materials to site.</p>
-      </div>
-      <div class="svc">
-        <svg viewBox="0 0 24 24"><rect x="1" y="7" width="14" height="10" rx="1"/><path d="M15 10h4l3 3v4h-7z"/><circle cx="6" cy="19" r="1.6"/><circle cx="18.5" cy="19" r="1.6"/></svg>
-        <div class="num">03</div>
-        <h3 data-en="Transportation" data-ar="المواصلات">Transportation</h3>
-        <p data-en="Site logistics and workforce transport arranged end to end." data-ar="تنظيم لوجستيات الموقع ونقل العمالة من البداية للنهاية.">Site logistics and workforce transport arranged end to end.</p>
-      </div>
-      <div class="svc">
-        <svg viewBox="0 0 24 24"><path d="M4 20h16"/><path d="M6 20V10l6-6 6 6v10"/><path d="M10 20v-6h4v6"/></svg>
-        <div class="num">04</div>
-        <h3 data-en="Heavy Equipment" data-ar="المعدات الثقيلة">Heavy Equipment</h3>
-        <p data-en="Cranes and heavy machinery available for rent and operation." data-ar="رافعات ومعدات ثقيلة متوفرة للإيجار والتشغيل.">Cranes and heavy machinery available for rent and operation.</p>
-      </div>
-      <div class="svc">
-        <svg viewBox="0 0 24 24"><path d="M12 2l3 6 6 1-4.5 4 1 6-5.5-3-5.5 3 1-6L3 9l6-1z"/></svg>
-        <div class="num">05</div>
-        <h3 data-en="Professional Supply" data-ar="التوريد المهني">Professional Supply</h3>
-        <p data-en="Coordinated procurement for contractors managing multiple sites." data-ar="توريد منسّق للمقاولين الذين يديرون عدة مواقع.">Coordinated procurement for contractors managing multiple sites.</p>
-      </div>
-      <div class="svc">
-        <svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>
-        <div class="num">06</div>
-        <h3 data-en="Contracted Delivery" data-ar="تنفيذ العقود">Contracted Delivery</h3>
-        <p data-en="Agreements scoped clearly, with delivery tracked against schedule." data-ar="اتفاقيات واضحة النطاق، مع متابعة التسليم وفق الجدول الزمني.">Agreements scoped clearly, with delivery tracked against schedule.</p>
-      </div>
+  <div class="stripbar">
+    <div class="strip-inner">
+      <div data-en="Licensed General Contracting Establishment" data-ar="مؤسسة مقاولات عامة مرخّصة" data-zh="持牌综合承包机构"
+        data-ur="لائسنس یافتہ جنرل کنٹریکٹنگ ادارہ" data-hi="लाइसेंस प्राप्त जनरल कॉन्ट्रैक्टिंग एस्टैब्लिशमेंट">
+        Licensed General Contracting Establishment</div>
+      <div data-en="Serving projects Kingdom-wide" data-ar="نخدم المشاريع في جميع أنحاء المملكة" data-zh="服务全国各地项目"
+        data-ur="پورے مملکت میں منصوبوں کی خدمت" data-hi="पूरे राज्य में परियोजनाओं की सेवा">Serving projects
+        Kingdom-wide</div>
     </div>
   </div>
-</section>
 
-<section id="gallery">
-  <div class="wrap">
-    <div class="section-head">
-      <div class="eyebrow-label" data-en="OUR WORK" data-ar="أعمالنا">OUR WORK</div>
-      <h2 data-en="On site across the Kingdom" data-ar="في الموقع في جميع أنحاء المملكة">On site across the Kingdom</h2>
-      <p data-en="Replace these placeholders with your own project photos." data-ar="استبدل هذه الصور المؤقتة بصور مشاريعكم الفعلية.">Replace these placeholders with your own project photos.</p>
-    </div>
-    <div class="gallery-grid">
-      <figure class="gimg">
-        <img src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='280'%3E%3Crect width='400' height='280' fill='%23e0dccf'/%3E%3Ctext x='200' y='145' font-family='sans-serif' font-size='16' fill='%23888' text-anchor='middle'%3EPhoto 1%3C/text%3E%3C/svg%3E" alt="Project site">
-        <figcaption data-en="Site mobilisation" data-ar="تعبئة الموقع">Site mobilisation</figcaption>
-      </figure>
-      <figure class="gimg">
-        <img src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='280'%3E%3Crect width='400' height='280' fill='%23e0dccf'/%3E%3Ctext x='200' y='145' font-family='sans-serif' font-size='16' fill='%23888' text-anchor='middle'%3EPhoto 2%3C/text%3E%3C/svg%3E" alt="Project site">
-        <figcaption data-en="Heavy equipment" data-ar="معدات ثقيلة">Heavy equipment</figcaption>
-      </figure>
-      <figure class="gimg">
-        <img src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='280'%3E%3Crect width='400' height='280' fill='%23e0dccf'/%3E%3Ctext x='200' y='145' font-family='sans-serif' font-size='16' fill='%23888' text-anchor='middle'%3EPhoto 3%3C/text%3E%3C/svg%3E" alt="Project site">
-        <figcaption data-en="Manpower team" data-ar="فريق العمل">Manpower team</figcaption>
-      </figure>
+  <div class="stats-band">
+    <div class="wrap stats-row">
+      <div class="sitem"><b>100%</b><span data-en="Documented agreements" data-ar="اتفاقيات موثقة" data-zh="书面协议"
+          data-ur="دستاویزی معاہدے" data-hi="दस्तावेज़ीकृत समझौते">Documented agreements</span></div>
+      <div class="sitem"><b>5</b><span data-en="Core supply lines" data-ar="خطوط توريد أساسية" data-zh="核心供应线"
+          data-ur="بنیادی سپلائی لائنیں" data-hi="मुख्य आपूर्ति श्रेणियां">Core supply lines</span></div>
+      <div class="sitem"><b>24/7</b><span data-en="Phone &amp; WhatsApp support" data-ar="دعم عبر الهاتف والواتساب"
+          data-zh="电话和WhatsApp支持" data-ur="فون اور واٹس ایپ سپورٹ" data-hi="फ़ोन और व्हाट्सएप सहायता">Phone &amp;
+          WhatsApp support</span></div>
+      <div class="sitem"><b data-en="KSA" data-ar="السعودية" data-zh="沙特" data-ur="سعودی عرب"
+          data-hi="सऊदी">KSA</b><span data-en="Kingdom-wide coverage" data-ar="تغطية على مستوى المملكة" data-zh="覆盖全国"
+          data-ur="پوری مملکت میں کوریج" data-hi="पूरे राज्य में कवरेज">Kingdom-wide coverage</span></div>
     </div>
   </div>
-</section>
 
-<section class="about">
-  <div class="wrap about">
-    <div>
-      <div class="eyebrow-label" data-en="ABOUT AFC" data-ar="عن المؤسسة">ABOUT AFC</div>
-      <h2 data-en="Built on relationships with contractors across the Kingdom" data-ar="بُنيت على علاقات مع مقاولين في جميع أنحاء المملكة">Built on relationships with contractors across the Kingdom</h2>
-      <p style="color:var(--ink-soft); margin-top:14px; font-size:15.5px;" data-en="Based in Wadi Al Dawasir, Amjad Fayez Eid Al Adama General Contracting Est. supplies manpower and materials to construction projects throughout Saudi Arabia. Every engagement is documented and agreed in writing before work begins, in line with standard Saudi contracting practice." data-ar="مقرّها وادي الدواسر، تقوم مؤسسة أمجاد فايز عيد الدوسري للمقاولات العامة بتوريد القوى العاملة والمواد لمشاريع البناء في جميع أنحاء المملكة العربية السعودية. يتم توثيق كل تعامل والاتفاق عليه كتابيًا قبل بدء العمل، وفق الممارسات المعتادة في عقود المقاولات السعودية.">Based in Wadi Al Dawasir, Amjad Fayez Eid Al Adama General Contracting Est. supplies manpower and materials to construction projects throughout Saudi Arabia. Every engagement is documented and agreed in writing before work begins, in line with standard Saudi contracting practice.</p>
-      <div class="stats">
-        <div class="stat"><b data-en="1" data-ar="١">1</b><span data-en="Registered establishment" data-ar="مؤسسة مسجّلة">Registered establishment</span></div>
-        <div class="stat"><b data-en="5" data-ar="٥">5</b><span data-en="Core supply lines" data-ar="خطوط توريد أساسية">Core supply lines</span></div>
-        <div class="stat"><b data-en="KSA" data-ar="السعودية">KSA</b><span data-en="Kingdom-wide reach" data-ar="تغطية على مستوى المملكة">Kingdom-wide reach</span></div>
+  <section id="services">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow-label" data-en="WHAT WE SUPPLY" data-ar="ما نقدّمه" data-zh="我们提供的服务"
+          data-ur="ہم کیا فراہم کرتے ہیں" data-hi="हम क्या आपूर्ति करते हैं">WHAT WE SUPPLY</div>
+        <h2 data-en="Everything a site needs, from one source" data-ar="كل ما يحتاجه موقع العمل، من جهة واحدة"
+          data-zh="工地所需的一切，一站式供应" data-ur="ایک ہی ذریعے سے سائٹ کی ہر ضرورت"
+          data-hi="साइट की हर ज़रूरत, एक ही स्रोत से">Everything a site needs, from one source</h2>
+        <p data-en="From workforce mobilisation to heavy machinery, AFC keeps Saudi construction and industrial sites running."
+          data-ar="من تعبئة القوى العاملة إلى المعدات الثقيلة، تُبقي AFC مواقع البناء والمواقع الصناعية في السعودية تعمل دون توقف."
+          data-zh="从人力调配到重型机械，AFC 让沙特的建筑和工业工地持续运转。"
+          data-ur="افرادی قوت کی تعیناتی سے لے کر بھاری مشینری تک، AFC سعودی تعمیراتی اور صنعتی سائٹس کو رواں رکھتا ہے۔"
+          data-hi="जनशक्ति की तैनाती से लेकर भारी मशीनरी तक, AFC सऊदी निर्माण और औद्योगिक साइटों को चालू रखता है।">From
+          workforce mobilisation to heavy machinery, AFC keeps Saudi construction and industrial sites running.</p>
+      </div>
+      <div class="services">
+        <div class="svc">
+          <svg viewBox="0 0 24 24">
+            <circle cx="12" cy="7" r="3.4" />
+            <path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8" />
+          </svg>
+          <div class="num">01</div>
+          <h3 data-en="Manpower Supply" data-ar="توريد القوى العاملة" data-zh="人力供应" data-ur="افرادی قوت کی فراہمی"
+            data-hi="जनशक्ति आपूर्ति">Manpower Supply</h3>
+          <p data-en="Skilled and general labour, mobilised and documented for Saudi worksites."
+            data-ar="عمالة ماهرة وعامة، جاهزة وموثّقة لمواقع العمل السعودية." data-zh="为沙特工地提供熟练及普通劳动力，配备完整文件。"
+            data-ur="سعودی سائٹس کے لیے ہنر مند اور عام مزدور، دستاویزات کے ساتھ تیار۔"
+            data-hi="सऊदी साइटों के लिए कुशल और सामान्य श्रमिक, दस्तावेज़ों सहित तैयार।">Skilled and general labour,
+            mobilised and documented for Saudi worksites.</p>
+        </div>
+        <div class="svc">
+          <svg viewBox="0 0 24 24">
+            <path d="M3 21V9l9-6 9 6v12" />
+            <path d="M9 21v-6h6v6" />
+          </svg>
+          <div class="num">02</div>
+          <h3 data-en="Construction Materials" data-ar="مواد البناء" data-zh="建筑材料" data-ur="تعمیراتی مواد"
+            data-hi="निर्माण सामग्री">Construction Materials</h3>
+          <p data-en="Reliable sourcing and delivery of core building materials to site."
+            data-ar="توريد وتوصيل موثوق لمواد البناء الأساسية إلى الموقع." data-zh="可靠采购并将核心建筑材料送达工地。"
+            data-ur="بنیادی تعمیراتی مواد کی قابل اعتماد فراہمی اور ترسیل۔"
+            data-hi="मुख्य निर्माण सामग्री की विश्वसनीय आपूर्ति और डिलीवरी।">Reliable sourcing and delivery of core
+            building materials to site.</p>
+        </div>
+        <div class="svc">
+          <svg viewBox="0 0 24 24">
+            <rect x="1" y="7" width="14" height="10" rx="1" />
+            <path d="M15 10h4l3 3v4h-7z" />
+            <circle cx="6" cy="19" r="1.6" />
+            <circle cx="18.5" cy="19" r="1.6" />
+          </svg>
+          <div class="num">03</div>
+          <h3 data-en="Transportation" data-ar="المواصلات" data-zh="运输" data-ur="نقل و حمل" data-hi="परिवहन">
+            Transportation</h3>
+          <p data-en="Site logistics and workforce transport arranged end to end."
+            data-ar="تنظيم لوجستيات الموقع ونقل العمالة من البداية للنهاية." data-zh="全程安排工地物流与人员运输。"
+            data-ur="سائٹ لاجسٹکس اور مزدوروں کی نقل و حمل کا مکمل انتظام۔"
+            data-hi="साइट लॉजिस्टिक्स और श्रमिक परिवहन की पूरी व्यवस्था।">Site logistics and workforce transport
+            arranged end to end.</p>
+        </div>
+        <div class="svc">
+          <svg viewBox="0 0 24 24">
+            <path d="M4 20h16" />
+            <path d="M6 20V10l6-6 6 6v10" />
+            <path d="M10 20v-6h4v6" />
+          </svg>
+          <div class="num">04</div>
+          <h3 data-en="Heavy Equipment" data-ar="المعدات الثقيلة" data-zh="重型设备" data-ur="بھاری مشینری"
+            data-hi="भारी उपकरण">Heavy Equipment</h3>
+          <p data-en="Cranes and heavy machinery available for rent and operation."
+            data-ar="رافعات ومعدات ثقيلة متوفرة للإيجار والتشغيل." data-zh="提供起重机及重型机械租赁与操作服务。"
+            data-ur="کرینیں اور بھاری مشینری کرائے اور آپریشن کے لیے دستیاب۔"
+            data-hi="किराए और संचालन के लिए क्रेन व भारी मशीनरी उपलब्ध।">Cranes and heavy machinery available for rent
+            and operation.</p>
+        </div>
+        <div class="svc">
+          <svg viewBox="0 0 24 24">
+            <path d="M12 2l3 6 6 1-4.5 4 1 6-5.5-3-5.5 3 1-6L3 9l6-1z" />
+          </svg>
+          <div class="num">05</div>
+          <h3 data-en="Professional Supply" data-ar="التوريد المهني" data-zh="专业供应" data-ur="پیشہ ورانہ سپلائی"
+            data-hi="व्यावसायिक आपूर्ति">Professional Supply</h3>
+          <p data-en="Coordinated procurement for contractors managing multiple sites."
+            data-ar="توريد منسّق للمقاولين الذين يديرون عدة مواقع." data-zh="为管理多个工地的承包商提供协调采购。"
+            data-ur="متعدد سائٹس چلانے والے ٹھیکیداروں کے لیے مربوط خریداری۔"
+            data-hi="कई साइटों को संभालने वाले ठेकेदारों के लिए समन्वित खरीद।">Coordinated procurement for contractors
+            managing multiple sites.</p>
+        </div>
+        <div class="svc">
+          <svg viewBox="0 0 24 24">
+            <path d="M20 6L9 17l-5-5" />
+          </svg>
+          <div class="num">06</div>
+          <h3 data-en="Contracted Delivery" data-ar="تنفيذ العقود" data-zh="合同交付" data-ur="معاہدہ شدہ ترسیل"
+            data-hi="अनुबंधित डिलीवरी">Contracted Delivery</h3>
+          <p data-en="Agreements scoped clearly, with delivery tracked against schedule."
+            data-ar="اتفاقيات واضحة النطاق، مع متابعة التسليم وفق الجدول الزمني." data-zh="协议范围明确，交付进度全程跟踪。"
+            data-ur="واضح دائرہ کار کے معاہدے، شیڈول کے مطابق ترسیل کی نگرانی۔"
+            data-hi="स्पष्ट दायरे वाले समझौते, शेड्यूल के अनुसार डिलीवरी ट्रैकिंग।">Agreements scoped clearly, with
+            delivery tracked against schedule.</p>
+        </div>
       </div>
     </div>
-    <div class="about-figure">
-      <div class="quote-mark">&rdquo;</div>
-      <p data-en="Every job starts with a written agreement — scope, manpower, materials and timeline set out clearly before a single crew is mobilised." data-ar="كل عمل يبدأ باتفاقية مكتوبة — يتم تحديد النطاق والقوى العاملة والمواد والجدول الزمني بوضوح قبل تعبئة أي طاقم.">Every job starts with a written agreement — scope, manpower, materials and timeline set out clearly before a single crew is mobilised.</p>
-      <div class="credit" data-en="— Muhammad Alyas, Manpower Supply Coordinator" data-ar="— محمد الياس، منسّق توريد القوى العاملة">— Muhammad Alyas, Manpower Supply Coordinator</div>
-    </div>
-  </div>
-</section>
+  </section>
 
-<section class="contact" id="contact">
-  <div class="wrap">
-    <div class="section-head">
-      <div class="eyebrow-label" data-en="GET IN TOUCH" data-ar="تواصل معنا">GET IN TOUCH</div>
-      <h2 data-en="Start a conversation about your site" data-ar="ابدأ الحديث عن مشروعك">Start a conversation about your site</h2>
-      <p data-en="Reach AFC directly by phone or email — most requests are answered the same day." data-ar="تواصل مع AFC مباشرة عبر الهاتف أو البريد الإلكتروني — يتم الرد على معظم الطلبات في نفس اليوم.">Reach AFC directly by phone or email — most requests are answered the same day.</p>
+  <section id="process" class="alt">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow-label" data-en="HOW WE WORK" data-ar="آلية العمل">HOW WE WORK</div>
+        <h2 data-en="A clear process, start to finish" data-ar="آلية عمل واضحة من البداية للنهاية">A clear process,
+          start to finish</h2>
+      </div>
+      <div class="process-grid">
+        <div class="step">
+          <div class="stepnum">01</div>
+          <h3 data-en="Site Assessment" data-ar="تقييم الموقع">Site Assessment</h3>
+          <p data-en="We review your location, scope and required manpower or materials."
+            data-ar="نراجع الموقع والنطاق والاحتياجات من القوى العاملة أو المواد.">We review your location, scope and
+            required manpower or materials.</p>
+        </div>
+        <div class="step">
+          <div class="stepnum">02</div>
+          <h3 data-en="Written Agreement" data-ar="اتفاقية مكتوبة">Written Agreement</h3>
+          <p data-en="Terms, timeline and pricing are confirmed in writing before mobilisation."
+            data-ar="يتم تأكيد الشروط والجدول الزمني والأسعار كتابيًا قبل التعبئة.">Terms, timeline and pricing are
+            confirmed in writing before mobilisation.</p>
+        </div>
+        <div class="step">
+          <div class="stepnum">03</div>
+          <h3 data-en="Mobilisation" data-ar="التعبئة">Mobilisation</h3>
+          <p data-en="Manpower, materials and equipment are deployed to your site."
+            data-ar="يتم نشر القوى العاملة والمواد والمعدات في موقعكم.">Manpower, materials and equipment are deployed
+            to your site.</p>
+        </div>
+        <div class="step">
+          <div class="stepnum">04</div>
+          <h3 data-en="Ongoing Support" data-ar="دعم مستمر">Ongoing Support</h3>
+          <p data-en="We stay in touch throughout the job to handle any changes needed."
+            data-ar="نبقى على تواصل طوال فترة العمل لمعالجة أي تغييرات لازمة.">We stay in touch throughout the job to
+            handle any changes needed.</p>
+        </div>
+      </div>
     </div>
-    <div class="contact-grid">
+  </section>
+
+  <section id="why">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow-label" data-en="WHY CHOOSE AFC" data-ar="لماذا AFC">WHY CHOOSE AFC</div>
+        <h2 data-en="Reasons contractors work with us" data-ar="أسباب تعامل المقاولين معنا">Reasons contractors work
+          with us</h2>
+      </div>
+      <div class="why-grid">
+        <div class="reason"><svg viewBox="0 0 24 24">
+            <path d="M20 6L9 17l-5-5" />
+          </svg>
+          <div>
+            <h3 data-en="Documented agreements" data-ar="اتفاقيات موثقة">Documented agreements</h3>
+            <p data-en="Every job is scoped and agreed in writing before work starts."
+              data-ar="يتم تحديد نطاق كل عمل والاتفاق عليه كتابيًا قبل البدء.">Every job is scoped and agreed in writing
+              before work starts.</p>
+          </div>
+        </div>
+        <div class="reason"><svg viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="9" />
+            <path d="M12 7v5l3 3" />
+          </svg>
+          <div>
+            <h3 data-en="Fast response" data-ar="استجابة سريعة">Fast response</h3>
+            <p data-en="Most enquiries by phone or email are answered the same day."
+              data-ar="يتم الرد على معظم الاستفسارات في نفس اليوم.">Most enquiries by phone or email are answered the
+              same day.</p>
+          </div>
+        </div>
+        <div class="reason"><svg viewBox="0 0 24 24">
+            <path d="M3 21V9l9-6 9 6v12" />
+            <path d="M9 21v-6h6v6" />
+          </svg>
+          <div>
+            <h3 data-en="Kingdom-wide reach" data-ar="تغطية شاملة">Kingdom-wide reach</h3>
+            <p data-en="Manpower, materials and equipment supplied across Saudi Arabia."
+              data-ar="توريد القوى العاملة والمواد والمعدات في جميع أنحاء السعودية.">Manpower, materials and equipment
+              supplied across Saudi Arabia.</p>
+          </div>
+        </div>
+        <div class="reason"><svg viewBox="0 0 24 24">
+            <circle cx="12" cy="7" r="3.4" />
+            <path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8" />
+          </svg>
+          <div>
+            <h3 data-en="Direct coordination" data-ar="تنسيق مباشر">Direct coordination</h3>
+            <p data-en="One point of contact managing manpower and logistics for your job."
+              data-ar="جهة اتصال واحدة تدير القوى العاملة واللوجستيات لمشروعكم.">One point of contact managing manpower
+              and logistics for your job.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="certifications" class="alt">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow-label" data-en="COMPLIANCE" data-ar="الالتزام">COMPLIANCE</div>
+        <h2 data-en="Licensed and properly documented" data-ar="مرخّصة وموثقة بشكل صحيح">Licensed and properly
+          documented</h2>
+      </div>
+      <div class="why-grid">
+        <div class="reason"><svg viewBox="0 0 24 24">
+            <path d="M20 6L9 17l-5-5" />
+          </svg>
+          <div>
+            <h3 data-en="Registered establishment" data-ar="مؤسسة مسجّلة">Registered establishment</h3>
+            <p data-en="Operating as a legally registered general contracting establishment in Saudi Arabia."
+              data-ar="تعمل كمؤسسة مقاولات عامة مسجّلة قانونيًا في المملكة العربية السعودية.">Operating as a legally
+              registered general contracting establishment in Saudi Arabia.</p>
+          </div>
+        </div>
+        <div class="reason"><svg viewBox="0 0 24 24">
+            <path d="M20 6L9 17l-5-5" />
+          </svg>
+          <div>
+            <h3 data-en="Documented manpower" data-ar="قوى عاملة موثقة">Documented manpower</h3>
+            <p data-en="Workers supplied with proper documentation as required by Saudi labour regulations."
+              data-ar="يتم توريد العمالة بالوثائق المطلوبة وفق أنظمة العمل السعودية.">Workers supplied with proper
+              documentation as required by Saudi labour regulations.</p>
+          </div>
+        </div>
+        <div class="reason"><svg viewBox="0 0 24 24">
+            <path d="M20 6L9 17l-5-5" />
+          </svg>
+          <div>
+            <h3 data-en="Written agreements" data-ar="اتفاقيات مكتوبة">Written agreements</h3>
+            <p data-en="Every engagement is confirmed in writing before mobilisation begins."
+              data-ar="يتم تأكيد كل تعامل كتابيًا قبل بدء التعبئة.">Every engagement is confirmed in writing before
+              mobilisation begins.</p>
+          </div>
+        </div>
+        <div class="reason"><svg viewBox="0 0 24 24">
+            <path d="M20 6L9 17l-5-5" />
+          </svg>
+          <div>
+            <h3 data-en="Safety-first mobilisation" data-ar="التعبئة وفق معايير السلامة">Safety-first mobilisation</h3>
+            <p data-en="Equipment and manpower deployed with site safety practices in mind."
+              data-ar="يتم نشر المعدات والعمالة مع مراعاة ممارسات السلامة في الموقع.">Equipment and manpower deployed
+              with site safety practices in mind.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="areas">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow-label" data-en="SERVICE AREAS" data-ar="مناطق الخدمة">SERVICE AREAS</div>
+        <h2 data-en="Where we work" data-ar="أين نعمل">Where we work</h2>
+        <p data-en="Based in Wadi Al Dawasir, mobilised across the Kingdom."
+          data-ar="مقرّنا وادي الدواسر، وننتشر في جميع أنحاء المملكة.">Based in Wadi Al Dawasir, mobilised across the
+          Kingdom.</p>
+      </div>
+      <div class="areas-grid">
+        <span class="area-pill" data-en="Wadi Al Dawasir" data-ar="وادي الدواسر">Wadi Al Dawasir</span>
+        <span class="area-pill" data-en="Riyadh" data-ar="الرياض">Riyadh</span>
+        <span class="area-pill" data-en="Al Kharj" data-ar="الخرج">Al Kharj</span>
+        <span class="area-pill" data-en="Dammam" data-ar="الدمام">Dammam</span>
+        <span class="area-pill" data-en="Jeddah" data-ar="جدة">Jeddah</span>
+        <span class="area-pill" data-en="Najran" data-ar="نجران">Najran</span>
+        <span class="area-pill" data-en="Abha" data-ar="أبها">Abha</span>
+        <span class="area-pill" data-en="+ Kingdom-wide on request" data-ar="+ في جميع أنحاء المملكة عند الطلب">+
+          Kingdom-wide on request</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="gallery">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow-label" data-en="OUR WORK" data-ar="أعمالنا">OUR WORK</div>
+        <h2 data-en="On site across the Kingdom" data-ar="في الموقع في جميع أنحاء المملكة">On site across the Kingdom
+        </h2>
+        <p data-en="Custom site illustrations — swap in your own project photos any time."
+          data-ar="رسوم توضيحية للموقع — يمكن استبدالها بصور مشاريعكم الفعلية في أي وقت.">Custom site illustrations —
+          swap in your own project photos any time.</p>
+      </div>
+      <div class="gallery-grid">
+        <figure class="gimg"><svg class="gtile" viewBox="0 0 400 260">
+            <rect width="400" height="260" fill="#173b5e" />
+            <line x1="200" y1="30" x2="200" y2="230" stroke="#e2812b" stroke-width="4" />
+            <line x1="120" y1="60" x2="280" y2="60" stroke="#e2812b" stroke-width="4" />
+            <line x1="200" y1="60" x2="150" y2="120" stroke="#cfdae4" stroke-width="2" />
+            <line x1="150" y1="120" x2="150" y2="150" stroke="#cfdae4" stroke-width="2" />
+            <rect x="185" y="220" width="30" height="20" fill="#e2812b" />
+          </svg>
+          <figcaption data-en="Tower crane on site" data-ar="رافعة برجية في الموقع">Tower crane on site</figcaption>
+        </figure>
+        <figure class="gimg"><svg class="gtile" viewBox="0 0 400 260">
+            <rect width="400" height="260" fill="#efe9db" />
+            <path d="M130 160a70 70 0 0 1 140 0z" fill="none" stroke="#173b5e" stroke-width="6" />
+            <ellipse cx="200" cy="160" rx="90" ry="14" fill="#c81e6e" />
+          </svg>
+          <figcaption data-en="Safety-first sites" data-ar="مواقع تلتزم بالسلامة">Safety-first sites</figcaption>
+        </figure>
+        <figure class="gimg"><svg class="gtile" viewBox="0 0 400 260">
+            <rect width="400" height="260" fill="#173b5e" />
+            <rect x="90" y="60" width="220" height="150" fill="none" stroke="#cfdae4" stroke-width="3" />
+            <line x1="90" y1="105" x2="310" y2="105" stroke="#e2812b" stroke-width="2" />
+            <line x1="150" y1="60" x2="150" y2="210" stroke="#e2812b" stroke-width="2" />
+            <line x1="230" y1="60" x2="230" y2="210" stroke="#e2812b" stroke-width="2" />
+            <line x1="90" y1="160" x2="310" y2="160" stroke="#e2812b" stroke-width="2" />
+          </svg>
+          <figcaption data-en="Site &amp; project planning" data-ar="تخطيط الموقع والمشروع">Site &amp; project planning
+          </figcaption>
+        </figure>
+        <figure class="gimg"><svg class="gtile" viewBox="0 0 400 260">
+            <rect width="400" height="260" fill="#efe9db" />
+            <rect x="60" y="150" width="120" height="60" fill="#173b5e" />
+            <path d="M180 150 L230 100 L260 100 L260 150 Z" fill="none" stroke="#173b5e" stroke-width="6" />
+            <circle cx="90" cy="215" r="14" fill="#e2812b" />
+            <circle cx="150" cy="215" r="14" fill="#e2812b" />
+          </svg>
+          <figcaption data-en="Excavation &amp; earthworks" data-ar="أعمال الحفر والترابية">Excavation &amp; earthworks
+          </figcaption>
+        </figure>
+        <figure class="gimg"><svg class="gtile" viewBox="0 0 400 260">
+            <rect width="400" height="260" fill="#173b5e" />
+            <rect x="80" y="120" width="150" height="60" fill="none" stroke="#cfdae4" stroke-width="5" />
+            <rect x="230" y="90" width="50" height="90" fill="none" stroke="#e2812b" stroke-width="5" />
+            <circle cx="120" cy="200" r="14" fill="#e2812b" />
+            <circle cx="200" cy="200" r="14" fill="#e2812b" />
+            <circle cx="260" cy="200" r="14" fill="#e2812b" />
+          </svg>
+          <figcaption data-en="Heavy equipment fleet" data-ar="أسطول المعدات الثقيلة">Heavy equipment fleet</figcaption>
+        </figure>
+        <figure class="gimg"><svg class="gtile" viewBox="0 0 400 260">
+            <rect width="400" height="260" fill="#efe9db" />
+            <rect x="90" y="150" width="45" height="70" fill="#173b5e" />
+            <rect x="150" y="100" width="45" height="120" fill="#173b5e" />
+            <rect x="210" y="130" width="45" height="90" fill="#c81e6e" />
+            <rect x="270" y="70" width="45" height="150" fill="#173b5e" />
+          </svg>
+          <figcaption data-en="High-rise construction" data-ar="إنشاء الأبراج">High-rise construction</figcaption>
+        </figure>
+        <figure class="gimg"><svg class="gtile" viewBox="0 0 400 260">
+            <rect width="400" height="260" fill="#173b5e" />
+            <g fill="none" stroke="#cfdae4" stroke-width="2">
+              <rect x="70" y="90" width="60" height="26" />
+              <rect x="130" y="90" width="60" height="26" />
+              <rect x="190" y="90" width="60" height="26" />
+              <rect x="250" y="90" width="60" height="26" />
+              <rect x="100" y="116" width="60" height="26" />
+              <rect x="160" y="116" width="60" height="26" />
+              <rect x="220" y="116" width="60" height="26" />
+              <rect x="70" y="142" width="60" height="26" />
+              <rect x="130" y="142" width="60" height="26" />
+              <rect x="190" y="142" width="60" height="26" />
+              <rect x="250" y="142" width="60" height="26" />
+            </g>
+          </svg>
+          <figcaption data-en="Structural &amp; masonry work" data-ar="أعمال الهيكل والبناء">Structural &amp; masonry
+            work</figcaption>
+        </figure>
+        <figure class="gimg"><svg class="gtile" viewBox="0 0 400 260">
+            <rect width="400" height="260" fill="#efe9db" />
+            <path d="M150 70 L110 210" stroke="#173b5e" stroke-width="10" stroke-linecap="round" />
+            <path d="M250 70 L290 210" stroke="#c81e6e" stroke-width="10" stroke-linecap="round" />
+            <circle cx="150" cy="70" r="16" fill="none" stroke="#173b5e" stroke-width="6" />
+          </svg>
+          <figcaption data-en="Tools &amp; skilled trades" data-ar="أدوات وحرفيون مهرة">Tools &amp; skilled trades
+          </figcaption>
+        </figure>
+        <figure class="gimg"><svg class="gtile" viewBox="0 0 400 260">
+            <rect width="400" height="260" fill="#173b5e" />
+            <rect x="0" y="150" width="400" height="60" fill="#3a5a78" />
+            <line x1="20" y1="180" x2="70" y2="180" stroke="#e2812b" stroke-width="5" />
+            <line x1="110" y1="180" x2="160" y2="180" stroke="#e2812b" stroke-width="5" />
+            <line x1="200" y1="180" x2="250" y2="180" stroke="#e2812b" stroke-width="5" />
+            <line x1="290" y1="180" x2="340" y2="180" stroke="#e2812b" stroke-width="5" />
+          </svg>
+          <figcaption data-en="Transport &amp; access roads" data-ar="النقل وطرق الوصول">Transport &amp; access roads
+          </figcaption>
+        </figure>
+        <figure class="gimg"><svg class="gtile" viewBox="0 0 400 260">
+            <rect width="400" height="260" fill="#efe9db" />
+            <circle cx="150" cy="110" r="24" fill="#173b5e" />
+            <circle cx="220" cy="100" r="24" fill="#c81e6e" />
+            <circle cx="280" cy="115" r="24" fill="#173b5e" />
+            <path d="M110 210c0-30 26-55 40-55s40 25 40 55" fill="none" stroke="#173b5e" stroke-width="6" />
+            <path d="M180 210c0-30 26-55 40-55s40 25 40 55" fill="none" stroke="#c81e6e" stroke-width="6" />
+            <path d="M250 210c0-30 26-55 40-55s40 25 40 55" fill="none" stroke="#173b5e" stroke-width="6" />
+          </svg>
+          <figcaption data-en="Our manpower teams" data-ar="فرق القوى العاملة لدينا">Our manpower teams</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="alt">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow-label" data-en="FEATURED PROJECTS" data-ar="مشاريع مختارة">FEATURED PROJECTS</div>
+        <h2 data-en="Recent work" data-ar="أعمال حديثة">Recent work</h2>
+        <p data-en="Sample project types — replace with your own case studies."
+          data-ar="أنواع مشاريع نموذجية — استبدلها بدراسات حالة مشاريعكم الفعلية.">Sample project types — replace with
+          your own case studies.</p>
+      </div>
+      <div class="projects-grid">
+        <div class="pcard">
+          <div class="pimg">Project photo</div>
+          <div class="pbody">
+            <div class="ptag" data-en="RESIDENTIAL" data-ar="سكني">RESIDENTIAL</div>
+            <h3 data-en="Villa Compound, Wadi Al Dawasir" data-ar="مجمع فلل، وادي الدواسر">Villa Compound, Wadi Al
+              Dawasir</h3>
+            <p data-en="Manpower and materials supply for a multi-villa development."
+              data-ar="توريد قوى عاملة ومواد لمشروع فلل متعدد.">Manpower and materials supply for a multi-villa
+              development.</p>
+          </div>
+        </div>
+        <div class="pcard">
+          <div class="pimg">Project photo</div>
+          <div class="pbody">
+            <div class="ptag" data-en="INDUSTRIAL" data-ar="صناعي">INDUSTRIAL</div>
+            <h3 data-en="Warehouse Facility" data-ar="منشأة مستودعات">Warehouse Facility</h3>
+            <p data-en="Heavy equipment and transportation for site build-out."
+              data-ar="معدات ثقيلة ونقل لإنشاء الموقع.">Heavy equipment and transportation for site build-out.</p>
+          </div>
+        </div>
+        <div class="pcard">
+          <div class="pimg">Project photo</div>
+          <div class="pbody">
+            <div class="ptag" data-en="INFRASTRUCTURE" data-ar="بنية تحتية">INFRASTRUCTURE</div>
+            <h3 data-en="Road Access Works" data-ar="أعمال طرق">Road Access Works</h3>
+            <p data-en="Skilled labour and machinery mobilised on short notice."
+              data-ar="عمالة ماهرة وآليات تم تعبئتها خلال مهلة قصيرة.">Skilled labour and machinery mobilised on short
+              notice.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="team">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow-label" data-en="LEADERSHIP" data-ar="القيادة">LEADERSHIP</div>
+        <h2 data-en="Who you'll work with" data-ar="من ستتعامل معه">Who you'll work with</h2>
+      </div>
+      <div class="team-grid">
+        <div class="member">
+          <div class="avatar">AF</div>
+          <h3 data-en="Amjad Fayez Eid Al Adama" data-ar="أمجاد فايز عيد الدوسري">Amjad Fayez Eid Al Adama</h3><span
+            data-en="Establishment Owner" data-ar="صاحب المؤسسة">Establishment Owner</span>
+        </div>
+        <div class="member">
+          <div class="avatar">MA</div>
+          <h3 data-en="Muhammad Alyas" data-ar="محمد الياس">Muhammad Alyas</h3><span
+            data-en="Manpower Supply Coordinator" data-ar="منسّق توريد القوى العاملة">Manpower Supply Coordinator</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="testimonials" class="alt">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow-label" data-en="CLIENT FEEDBACK" data-ar="آراء العملاء">CLIENT FEEDBACK</div>
+        <h2 data-en="Sample testimonials" data-ar="آراء نموذجية">Sample testimonials</h2>
+        <p data-en="Placeholder quotes — swap in real client feedback when available."
+          data-ar="اقتباسات مؤقتة — استبدلها بآراء عملائكم الفعلية عند توفرها.">Placeholder quotes — swap in real client
+          feedback when available.</p>
+      </div>
+      <div class="testi-grid">
+        <div class="testi">
+          <div class="qmark">&rdquo;</div>
+          <p data-en="Manpower arrived on the date agreed, fully documented."
+            data-ar="وصلت العمالة في الموعد المتفق عليه وموثقة بالكامل.">Manpower arrived on the date agreed, fully
+            documented.</p><b data-en="Site Supervisor, Riyadh" data-ar="مشرف موقع، الرياض">Site Supervisor, Riyadh</b>
+        </div>
+        <div class="testi">
+          <div class="qmark">&rdquo;</div>
+          <p data-en="Clear written terms before any equipment was moved."
+            data-ar="شروط مكتوبة واضحة قبل نقل أي معدات.">Clear written terms before any equipment was moved.</p><b
+            data-en="Project Manager, Kharj" data-ar="مدير مشروع، الخرج">Project Manager, Kharj</b>
+        </div>
+        <div class="testi">
+          <div class="qmark">&rdquo;</div>
+          <p data-en="Responsive by phone whenever we needed changes on site."
+            data-ar="استجابة سريعة عبر الهاتف كلما احتجنا تغييرات في الموقع.">Responsive by phone whenever we needed
+            changes on site.</p><b data-en="Contractor, Wadi Al Dawasir" data-ar="مقاول، وادي الدواسر">Contractor, Wadi
+            Al Dawasir</b>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="about">
+    <div class="wrap about">
       <div>
-        <div class="ccard">
-          <svg viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.7a2 2 0 0 1-.5 2.1L8 9.7a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.5 2.7.6a2 2 0 0 1 1.7 2z"/></svg>
-          <div>
-            <b data-en="Phone" data-ar="الهاتف">Phone</b>
-            <span>059 038 8304 &nbsp;·&nbsp; 053 227 9496</span>
-          </div>
-        </div>
-        <div class="ccard">
-          <svg viewBox="0 0 24 24"><path d="M4 4h16v16H4z"/><path d="M22 6l-10 7L2 6"/></svg>
-          <div>
-            <b data-en="Email" data-ar="البريد الإلكتروني">Email</b>
-            <span>mohdalyas496@gmail.com</span>
-          </div>
-        </div>
-        <div class="ccard">
-          <svg viewBox="0 0 24 24"><path d="M21 10c0 6-9 12-9 12S3 16 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          <div>
-            <b data-en="Address" data-ar="العنوان">Address</b>
-            <span data-en="Wadi Al Dawasir, P.O. Box 655, Pin 31982, Saudi Arabia" data-ar="وادي الدواسر، ص.ب 655، الرمز البريدي 31982، المملكة العربية السعودية">Wadi Al Dawasir, P.O. Box 655, Pin 31982, Saudi Arabia</span>
-          </div>
+        <div class="eyebrow-label" data-en="ABOUT AFC" data-ar="عن المؤسسة">ABOUT AFC</div>
+        <h2 data-en="Built on relationships with contractors across the Kingdom"
+          data-ar="بُنيت على علاقات مع مقاولين في جميع أنحاء المملكة">Built on relationships with contractors across the
+          Kingdom</h2>
+        <p style="color:var(--ink-soft); margin-top:14px; font-size:15.5px;"
+          data-en="Based in Wadi Al Dawasir, Amjad Fayez Eid Al Adama General Contracting Est. supplies manpower and materials to construction projects throughout Saudi Arabia. Every engagement is documented and agreed in writing before work begins, in line with standard Saudi contracting practice."
+          data-ar="مقرّها وادي الدواسر، تقوم مؤسسة أمجاد فايز عيد الدوسري للمقاولات العامة بتوريد القوى العاملة والمواد لمشاريع البناء في جميع أنحاء المملكة العربية السعودية. يتم توثيق كل تعامل والاتفاق عليه كتابيًا قبل بدء العمل، وفق الممارسات المعتادة في عقود المقاولات السعودية.">
+          Based in Wadi Al Dawasir, Amjad Fayez Eid Al Adama General Contracting Est. supplies manpower and materials to
+          construction projects throughout Saudi Arabia. Every engagement is documented and agreed in writing before
+          work begins, in line with standard Saudi contracting practice.</p>
+        <div class="stats">
+          <div class="stat"><b data-en="1" data-ar="١">1</b><span data-en="Registered establishment"
+              data-ar="مؤسسة مسجّلة">Registered establishment</span></div>
+          <div class="stat"><b data-en="5" data-ar="٥">5</b><span data-en="Core supply lines"
+              data-ar="خطوط توريد أساسية">Core supply lines</span></div>
+          <div class="stat"><b data-en="KSA" data-ar="السعودية">KSA</b><span data-en="Kingdom-wide reach"
+              data-ar="تغطية على مستوى المملكة">Kingdom-wide reach</span></div>
         </div>
       </div>
-      <div class="mappane">
-        <h3 data-en="Working with AFC" data-ar="التعامل مع AFC">Working with AFC</h3>
-        <p data-en="Share your site location, manpower needs and timeline. We'll confirm scope and terms in writing before mobilising any crew or equipment." data-ar="شاركنا موقع مشروعك واحتياجاتك من القوى العاملة والجدول الزمني. سنؤكد النطاق والشروط كتابيًا قبل تعبئة أي طاقم أو معدات.">Share your site location, manpower needs and timeline. We'll confirm scope and terms in writing before mobilising any crew or equipment.</p>
+      <div class="about-figure">
+        <div class="quote-mark">&rdquo;</div>
+        <p data-en="Every job starts with a written agreement — scope, manpower, materials and timeline set out clearly before a single crew is mobilised."
+          data-ar="كل عمل يبدأ باتفاقية مكتوبة — يتم تحديد النطاق والقوى العاملة والمواد والجدول الزمني بوضوح قبل تعبئة أي طاقم.">
+          Every job starts with a written agreement — scope, manpower, materials and timeline set out clearly before a
+          single crew is mobilised.</p>
+        <div class="credit" data-en="— Muhammad Alyas, Manpower Supply Coordinator"
+          data-ar="— محمد الياس، منسّق توريد القوى العاملة">— Muhammad Alyas, Manpower Supply Coordinator</div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<footer>
-  <div class="wrap footrow">
-    <div data-en="© 2026 Amjad Fayez Eid Al Adama General Cont. Est." data-ar="© 2026 مؤسسة أمجاد فايز عيد الدوسري للمقاولات العامة">© 2026 Amjad Fayez Eid Al Adama General Cont. Est.</div>
-    <div data-en="Wadi Al Dawasir · Saudi Arabia" data-ar="وادي الدواسر · المملكة العربية السعودية">Wadi Al Dawasir · Saudi Arabia</div>
-  </div>
-</footer>
+  <section id="faq" class="alt">
+    <div class="wrap" style="max-width:820px;">
+      <div class="section-head">
+        <div class="eyebrow-label" data-en="FAQ" data-ar="الأسئلة الشائعة">FAQ</div>
+        <h2 data-en="Common questions" data-ar="أسئلة شائعة">Common questions</h2>
+      </div>
+      <details class="faq-item" open>
+        <summary data-en="Which areas do you serve?" data-ar="ما هي المناطق التي تخدمونها؟">Which areas do you serve?
+        </summary>
+        <p data-en="AFC supplies manpower, materials and equipment to projects throughout Saudi Arabia, based out of Wadi Al Dawasir."
+          data-ar="تقوم AFC بتوريد القوى العاملة والمواد والمعدات لمشاريع في جميع أنحاء السعودية، انطلاقًا من وادي الدواسر.">
+          AFC supplies manpower, materials and equipment to projects throughout Saudi Arabia, based out of Wadi Al
+          Dawasir.</p>
+      </details>
+      <details class="faq-item">
+        <summary data-en="How fast can manpower be mobilised?" data-ar="ما مدى سرعة تعبئة القوى العاملة؟">How fast can
+          manpower be mobilised?</summary>
+        <p data-en="Timelines depend on scope and headcount — contact us with your requirement for a specific date."
+          data-ar="تعتمد المدة على النطاق وعدد العمالة — تواصل معنا بمتطلباتكم لتحديد موعد دقيق.">Timelines depend on
+          scope and headcount — contact us with your requirement for a specific date.</p>
+      </details>
+      <details class="faq-item">
+        <summary data-en="Do you provide a written contract?" data-ar="هل تقدمون عقدًا مكتوبًا؟">Do you provide a
+          written contract?</summary>
+        <p data-en="Yes — scope, manpower, materials and timeline are agreed in writing before mobilisation begins."
+          data-ar="نعم — يتم الاتفاق على النطاق والقوى العاملة والمواد والجدول الزمني كتابيًا قبل بدء التعبئة.">Yes —
+          scope, manpower, materials and timeline are agreed in writing before mobilisation begins.</p>
+      </details>
+      <details class="faq-item">
+        <summary data-en="Can you supply equipment without manpower?" data-ar="هل يمكن توريد المعدات فقط دون عمالة؟">Can
+          you supply equipment without manpower?</summary>
+        <p data-en="Yes, heavy equipment and transportation can be arranged independently of manpower supply."
+          data-ar="نعم، يمكن ترتيب المعدات الثقيلة والنقل بشكل مستقل عن توريد القوى العاملة.">Yes, heavy equipment and
+          transportation can be arranged independently of manpower supply.</p>
+      </details>
+    </div>
+  </section>
 
-<script>
-let isAr = false;
-function toggleLang(){
-  isAr = !isAr;
-  document.getElementById('htmlRoot').setAttribute('dir', isAr ? 'rtl' : 'ltr');
-  document.getElementById('htmlRoot').setAttribute('lang', isAr ? 'ar' : 'en');
-  document.querySelectorAll('[data-en]').forEach(el=>{
-    el.textContent = isAr ? el.getAttribute('data-ar') : el.getAttribute('data-en');
-  });
-}
-</script>
+  <section class="contact" id="contact">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow-label" data-en="GET IN TOUCH" data-ar="تواصل معنا" data-zh="联系我们" data-ur="ہم سے رابطہ کریں"
+          data-hi="संपर्क करें">GET IN TOUCH</div>
+        <h2 data-en="Start a conversation about your site" data-ar="ابدأ الحديث عن مشروعك" data-zh="就您的项目开始洽谈"
+          data-ur="اپنی سائٹ کے بارے میں بات چیت شروع کریں" data-hi="अपनी साइट के बारे में बातचीत शुरू करें">Start a
+          conversation about your site</h2>
+        <p data-en="Reach AFC directly by phone or email — most requests are answered the same day."
+          data-ar="تواصل مع AFC مباشرة عبر الهاتف أو البريد الإلكتروني — يتم الرد على معظم الطلبات في نفس اليوم."
+          data-zh="通过电话或电子邮件直接联系 AFC——大多数请求当天即可回复。"
+          data-ur="فون یا ای میل کے ذریعے براہ راست AFC سے رابطہ کریں — زیادہ تر درخواستوں کا جواب اسی دن دیا جاتا ہے۔"
+          data-hi="फ़ोन या ईमेल के ज़रिए सीधे AFC से संपर्क करें — अधिकतर अनुरोधों का जवाब उसी दिन दिया जाता है।">Reach
+          AFC directly by phone or email — most requests are answered the same day.</p>
+      </div>
+      <div class="contact-grid">
+        <div>
+          <div class="ccard">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M12.04 2c-5.5 0-10 4.5-10 10 0 1.77.46 3.45 1.27 4.9L2 22l5.25-1.38A9.94 9.94 0 0 0 12.04 22c5.5 0 10-4.5 10-10s-4.5-10-10-10zm5.8 14.2c-.24.68-1.4 1.3-1.95 1.38-.5.08-1.13.11-1.82-.12-.42-.14-.96-.32-1.66-.62-2.92-1.26-4.83-4.2-4.98-4.4-.14-.2-1.2-1.6-1.2-3.06s.76-2.17 1.03-2.47c.26-.3.58-.37.77-.37h.55c.18 0 .42-.03.65.5.24.55.8 1.9.87 2.04.07.14.12.3.02.5-.1.2-.15.3-.3.47-.14.16-.3.36-.43.48-.14.14-.29.29-.13.57.16.28.71 1.18 1.53 1.9 1.05.94 1.94 1.24 2.22 1.38.28.14.44.12.6-.07.16-.2.68-.8.86-1.07.18-.28.36-.23.6-.14.24.1 1.55.73 1.82.86.27.14.45.2.51.32.07.12.07.68-.17 1.36z" />
+            </svg>
+            <div>
+              <b data-en="WhatsApp" data-ar="واتساب" data-zh="WhatsApp" data-ur="واٹس ایپ"
+                data-hi="व्हाट्सएप">WhatsApp</b>
+              <span><a href="https://wa.me/966532279496" target="_blank" rel="noopener" style="color:#9fb0c2;">053 227
+                  9496</a></span>
+            </div>
+          </div>
+          <div class="ccard">
+            <svg viewBox="0 0 24 24">
+              <path d="M4 4h16v16H4z" />
+              <path d="M22 6l-10 7L2 6" />
+            </svg>
+            <div>
+              <b data-en="Email" data-ar="البريد الإلكتروني" data-zh="电子邮件" data-ur="ای میل" data-hi="ईमेल">Email</b>
+              <span>mohdalyas496@gmail.com</span>
+            </div>
+          </div>
+          <div class="ccard">
+            <svg viewBox="0 0 24 24">
+              <path d="M21 10c0 6-9 12-9 12S3 16 3 10a9 9 0 0 1 18 0z" />
+              <circle cx="12" cy="10" r="3" />
+            </svg>
+            <div>
+              <b data-en="Address" data-ar="العنوان" data-zh="地址" data-ur="پتہ" data-hi="पता">Address</b>
+              <span data-en="Wadi Al Dawasir, P.O. Box 655, Pin 31982, Saudi Arabia"
+                data-ar="وادي الدواسر، ص.ب 655، الرمز البريدي 31982، المملكة العربية السعودية"
+                data-zh="瓦迪杜瓦西尔，邮政信箱655，邮编31982，沙特阿拉伯" data-ur="وادی الدواسر، پوسٹ بکس 655، پن 31982، سعودی عرب"
+                data-hi="वादी अल-दवासिर, पोस्ट बॉक्स 655, पिन 31982, सऊदी अरब">Wadi Al Dawasir, P.O. Box 655, Pin 31982,
+                Saudi Arabia</span>
+            </div>
+          </div>
+        </div>
+        <div class="mappane">
+          <h3 data-en="Working with AFC" data-ar="التعامل مع AFC" data-zh="与 AFC 合作" data-ur="AFC کے ساتھ کام کرنا"
+            data-hi="AFC के साथ काम करना">Working with AFC</h3>
+          <p data-en="Share your site location, manpower needs and timeline. We'll confirm scope and terms in writing before mobilising any crew or equipment."
+            data-ar="شاركنا موقع مشروعك واحتياجاتك من القوى العاملة والجدول الزمني. سنؤكد النطاق والشروط كتابيًا قبل تعبئة أي طاقم أو معدات."
+            data-zh="请告知工地位置、人力需求和时间安排，我们会在部署人员或设备前以书面形式确认范围和条款。"
+            data-ur="اپنی سائٹ کا مقام، افرادی قوت کی ضروریات اور شیڈول بتائیں۔ ہم کسی بھی عملے یا مشینری کی تعیناتی سے پہلے دائرہ کار اور شرائط تحریری طور پر طے کریں گے۔"
+            data-hi="अपनी साइट का स्थान, जनशक्ति की ज़रूरतें और समय-सीमा साझा करें। किसी भी टीम या उपकरण की तैनाती से पहले हम दायरा और शर्तें लिखित रूप में तय करेंगे।">
+            Share your site location, manpower needs and timeline. We'll confirm scope and terms in writing before
+            mobilising any crew or equipment.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="careers" class="careers alt">
+    <div class="wrap">
+      <div class="eyebrow-label" data-en="JOIN US" data-ar="انضم إلينا" data-zh="加入我们" data-ur="ہمارے ساتھ شامل ہوں"
+        data-hi="हमसे जुड़ें">JOIN US</div>
+      <h2 data-en="Looking for manpower work in Saudi Arabia?" data-ar="تبحث عن عمل ضمن القوى العاملة في السعودية؟"
+        data-zh="正在寻找沙特的劳务工作？" data-ur="سعودی عرب میں مزدوری کا کام تلاش کر رہے ہیں؟"
+        data-hi="सऊदी अरब में जनशक्ति का काम ढूंढ रहे हैं?">Looking for manpower work in Saudi Arabia?</h2>
+      <p style="color:var(--ink-soft); margin-top:12px; font-size:15px;"
+        data-en="AFC regularly mobilises skilled and general labour for projects across the Kingdom. Message us on WhatsApp with your trade and experience."
+        data-ar="تقوم AFC بانتظام بتعبئة العمالة الماهرة والعامة لمشاريع في جميع أنحاء المملكة. راسلنا عبر واتساب مع ذكر مهنتك وخبرتك."
+        data-zh="AFC 定期为全国各地项目调配熟练及普通劳动力。请通过 WhatsApp 告知您的工种和经验。"
+        data-ur="AFC باقاعدگی سے پوری مملکت کے منصوبوں کے لیے ہنر مند اور عام مزدور فراہم کرتا ہے۔ اپنی مہارت اور تجربہ بتاتے ہوئے ہمیں واٹس ایپ پر پیغام دیں۔"
+        data-hi="AFC नियमित रूप से पूरे राज्य की परियोजनाओं के लिए कुशल और सामान्य श्रमिक तैनात करता है। अपने काम और अनुभव के साथ हमें व्हाट्सएप पर संदेश भेजें।">
+        AFC regularly mobilises skilled and general labour for projects across the Kingdom. Message us on WhatsApp with
+        your trade and experience.</p>
+      <a class="btn btn-primary" href="https://wa.me/966532279496" target="_blank" rel="noopener"
+        style="display:inline-flex;">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="#1c1200">
+          <path
+            d="M12.04 2c-5.5 0-10 4.5-10 10 0 1.77.46 3.45 1.27 4.9L2 22l5.25-1.38A9.94 9.94 0 0 0 12.04 22c5.5 0 10-4.5 10-10s-4.5-10-10-10zm5.8 14.2c-.24.68-1.4 1.3-1.95 1.38-.5.08-1.13.11-1.82-.12-.42-.14-.96-.32-1.66-.62-2.92-1.26-4.83-4.2-4.98-4.4-.14-.2-1.2-1.6-1.2-3.06s.76-2.17 1.03-2.47c.26-.3.58-.37.77-.37h.55c.18 0 .42-.03.65.5.24.55.8 1.9.87 2.04.07.14.12.3.02.5-.1.2-.15.3-.3.47-.14.16-.3.36-.43.48-.14.14-.29.29-.13.57.16.28.71 1.18 1.53 1.9 1.05.94 1.94 1.24 2.22 1.38.28.14.44.12.6-.07.16-.2.68-.8.86-1.07.18-.28.36-.23.6-.14.24.1 1.55.73 1.82.86.27.14.45.2.51.32.07.12.07.68-.17 1.36z" />
+        </svg>
+        <span data-en="Apply on WhatsApp" data-ar="قدّم عبر واتساب" data-zh="通过WhatsApp申请"
+          data-ur="واٹس ایپ پر درخواست دیں" data-hi="व्हाट्सएप पर आवेदन करें">Apply on WhatsApp</span>
+      </a>
+    </div>
+  </section>
+
+  <div class="cta-band">
+    <div class="wrap">
+      <h2 data-en="We handle every type of construction work" data-ar="نتولى جميع أنواع أعمال البناء"
+        data-zh="我们承接各类建筑工程" data-ur="ہم ہر قسم کے تعمیراتی کام سنبھالتے ہیں"
+        data-hi="हम हर तरह के निर्माण कार्य संभालते हैं">We handle every type of construction work</h2>
+      <p data-en="Manpower, materials, transportation or heavy equipment — partner with AFC and bring your next project to us."
+        data-ar="قوى عاملة، مواد، نقل أو معدات ثقيلة — تعاون مع AFC وأحضر مشروعكم القادم إلينا."
+        data-zh="人力、材料、运输或重型设备——与 AFC 合作，把您的下一个项目交给我们。"
+        data-ur="افرادی قوت، مواد، نقل و حمل یا بھاری مشینری — AFC کے ساتھ شراکت کریں اور اپنا اگلا منصوبہ ہمارے پاس لائیں۔"
+        data-hi="जनशक्ति, सामग्री, परिवहन या भारी उपकरण — AFC के साथ साझेदारी करें और अपनी अगली परियोजना हमारे पास लाएं।">
+        Manpower, materials, transportation or heavy equipment — partner with AFC and bring your next project to us.</p>
+      <a class="btn" href="https://wa.me/966532279496" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="#fff">
+          <path
+            d="M12.04 2c-5.5 0-10 4.5-10 10 0 1.77.46 3.45 1.27 4.9L2 22l5.25-1.38A9.94 9.94 0 0 0 12.04 22c5.5 0 10-4.5 10-10s-4.5-10-10-10zm5.8 14.2c-.24.68-1.4 1.3-1.95 1.38-.5.08-1.13.11-1.82-.12-.42-.14-.96-.32-1.66-.62-2.92-1.26-4.83-4.2-4.98-4.4-.14-.2-1.2-1.6-1.2-3.06s.76-2.17 1.03-2.47c.26-.3.58-.37.77-.37h.55c.18 0 .42-.03.65.5.24.55.8 1.9.87 2.04.07.14.12.3.02.5-.1.2-.15.3-.3.47-.14.16-.3.36-.43.48-.14.14-.29.29-.13.57.16.28.71 1.18 1.53 1.9 1.05.94 1.94 1.24 2.22 1.38.28.14.44.12.6-.07.16-.2.68-.8.86-1.07.18-.28.36-.23.6-.14.24.1 1.55.73 1.82.86.27.14.45.2.51.32.07.12.07.68-.17 1.36z" />
+        </svg>
+        <span data-en="Start Your Project" data-ar="ابدأ مشروعك" data-zh="启动您的项目" data-ur="اپنا منصوبہ شروع کریں"
+          data-hi="अपनी परियोजना शुरू करें">Start Your Project</span>
+      </a>
+    </div>
+  </div>
+
+  <footer>
+    <div class="wrap footrow">
+      <div data-en="© 2026 Amjad Fayez Eid Al Adama General Cont. Est."
+        data-ar="© 2026 مؤسسة أمجاد فايز عيد الدوسري للمقاولات العامة" data-zh="© 2026 阿姆贾德·法耶兹·艾德·阿达马综合承包机构"
+        data-ur="© 2026 امجد فایز عید الادامہ جنرل کنٹریکٹنگ ادارہ"
+        data-hi="© 2026 अमजद फ़ायेज़ ईद अल अदामा जनरल कॉन्ट्रैक्टिंग एस्ट.">© 2026 Amjad Fayez Eid Al Adama General
+        Cont. Est.</div>
+      <div data-en="Wadi Al Dawasir · Saudi Arabia" data-ar="وادي الدواسر · المملكة العربية السعودية"
+        data-zh="瓦迪杜瓦西尔 · 沙特阿拉伯" data-ur="وادی الدواسر · سعودی عرب" data-hi="वादी अल-दवासिर · सऊदी अरब">Wadi Al Dawasir
+        · Saudi Arabia</div>
+    </div>
+  </footer>
+
+  <script>
+    const rtlLangs = ['ar', 'ur'];
+    function toggleMenu() {
+      const nav = document.getElementById('mobileNav');
+      const btn = document.getElementById('hamBtn');
+      const open = nav.classList.toggle('open');
+      btn.textContent = open ? '✕' : '☰';
+      btn.setAttribute('aria-expanded', open);
+    }
+    function closeMenu() {
+      document.getElementById('mobileNav').classList.remove('open');
+      document.getElementById('hamBtn').textContent = '☰';
+      document.getElementById('hamBtn').setAttribute('aria-expanded', 'false');
+    }
+    function setLang(lang) {
+      const html = document.getElementById('htmlRoot');
+      html.setAttribute('dir', rtlLangs.includes(lang) ? 'rtl' : 'ltr');
+      html.setAttribute('lang', lang);
+      document.querySelectorAll('[data-en]').forEach(el => {
+        el.textContent = el.getAttribute('data-' + lang) || el.getAttribute('data-en');
+      });
+    }
+  </script>
 </body>
+
 </html>

@@ -350,8 +350,16 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      overflow: hidden;
       color: #8a8471;
       font-size: 13px;
+    }
+
+    .pcard .pimg img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
 
     .pcard .pbody {
@@ -1522,7 +1530,7 @@
       </div>
       <div class="projects-grid">
         <div class="pcard">
-          <div class="pimg">Project photo</div>
+          <div class="pimg"><img src="./assets/afcimg2.jpg" width="300" height="200" alt=""></div>
           <div class="pbody">
             <div class="ptag" data-en="RESIDENTIAL" data-ar="سكني">RESIDENTIAL</div>
             <h3 data-en="Villa Compound, Wadi Al Dawasir" data-ar="مجمع فلل، وادي الدواسر">Villa Compound, Wadi Al
@@ -1533,7 +1541,7 @@
           </div>
         </div>
         <div class="pcard">
-          <div class="pimg">Project photo</div>
+          <div class="pimg"><img src="./assets/afcimg1.jpg" width="300" height="300" alt=""></div>
           <div class="pbody">
             <div class="ptag" data-en="INDUSTRIAL" data-ar="صناعي">INDUSTRIAL</div>
             <h3 data-en="Warehouse Facility" data-ar="منشأة مستودعات">Warehouse Facility</h3>
@@ -1542,7 +1550,7 @@
           </div>
         </div>
         <div class="pcard">
-          <div class="pimg">Project photo</div>
+          <div class="pimg"><img src="./assets/afcimg3.jpg" alt=""></div>
           <div class="pbody">
             <div class="ptag" data-en="INFRASTRUCTURE" data-ar="بنية تحتية">INFRASTRUCTURE</div>
             <h3 data-en="Road Access Works" data-ar="أعمال طرق">Road Access Works</h3>
